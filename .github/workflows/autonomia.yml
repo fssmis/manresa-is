@@ -1,0 +1,24 @@
+name: Autonomia Manresa.is
+on:
+  schedule:
+    - cron: '0 8 * * *' # S'executa cada dia a les 8 del matí
+  workflow_dispatch: # Permet executar-ho a mà si vols provar
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Run Robot Redactor
+        run: python update_web.py
+      - name: Commit changes
+        run: |
+          git config --global user.name "Agent Tifa"
+          git config --global user.email "tifa@manresa.is"
+          git add index.html
+          git commit -m "Actualització matinal automàtica" || exit 0
+          git push
