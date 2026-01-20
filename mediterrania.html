@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esdeveniments | Manresa.is</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
+    <style>
+        * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background-color: #fff; color: #1a1a1a; line-height: 1.5; }
+
+        /* --- CAPÇALERA UNIFICADA --- */
+        .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
+        .nav-logo { font-family: 'Georgia', serif; font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
+        .punto-is { color: #f05a28 !important; }
+        .nav-menu { list-style: none; display: flex; gap: 15px; }
+        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
+        .nav-menu a:hover { color: #f05a28 !important; }
+        .nav-widgets { display: flex; align-items: center; gap: 10px; }
+        .lang-selector { font-family: sans-serif; font-size: 0.75rem; font-weight: bold; color: #bbb; border-right: 1px solid #eee !important; padding-right: 10px; display: flex; gap: 5px; }
+        .lang-selector .active { color: #f05a28 !important; }
+        .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; display: flex; align-items: center; gap: 5px; border: 1px solid #eee !important; color: #64748b; }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; padding-left: 10px; }
+
+        /* --- HERO --- */
+        .hero { text-align: center; padding: 80px 20px 40px; }
+        .hero h1 { font-size: 3rem; font-weight: 400; letter-spacing: -1.5px; margin-bottom: 10px; }
+        .hero p { color: #666; font-style: italic; font-size: 1.1rem; }
+
+        /* --- GRID 4 COLUMNES --- */
+        .grid-cards { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); /* FORCEM 4 COLUMNES */
+            gap: 20px; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 20px 80px; 
+        }
+        .card { text-decoration: none; color: inherit; display: flex; flex-direction: column; background: #fff; border: 1px solid #eee !important; border-radius: 10px; overflow: hidden; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-4px); border-color: #ddd !important; }
+        .img-container { width: 100%; height: 160px; overflow: hidden; }
+        .card img { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { padding: 15px; }
+        .meta { font-family: sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; }
+        .card p { font-size: 0.85rem; color: #555; line-height: 1.4; }
+
+        /* --- FOOTER UNIFICAT --- */
+        .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 60px; text-align: left; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; align-items: start; }
+        .footer-logo { font-family: 'Georgia', serif; font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
+        .footer-tagline { font-family: sans-serif; color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
+        .footer-social { display: flex; gap: 15px; margin-bottom: 20px; }
+        .footer-social a { color: #f05a28; text-decoration: none; font-size: 0.85rem; font-weight: 600; font-family: sans-serif; }
+        .footer-col h3 { font-family: sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li a { text-decoration: none; color: #64748b; font-family: sans-serif; font-size: 0.95rem; }
+        .ai-badge { display: inline-block; margin-top: 20px; padding: 4px 10px; background: #f8fafc; border: 1px solid #e2e8f0 !important; border-radius: 4px; font-size: 0.7rem; color: #94a3b8; font-weight: bold; text-transform: uppercase; font-family: sans-serif; }
+
+        /* RESPONSIVE */
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } .nav-menu { display: none; } }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Manresa<span class="punto-is">.is</span></a>
+            <ul class="nav-menu">
+                <li><a href="gastronomia.html">Teca i Beguda</a></li>
+                <li><a href="mediterrania.html" style="color: #f05a28;">Esdeveniments</a></li>
+                <li><a href="barris.html">Barris</a></li>
+                <li><a href="tecnologia.html">Tech & Work</a></li>
+                <li><a href="llum.html">Guies</a></li>
+                <li><a href="noticies.html">News</a></li>
+            </ul>
+            <div class="nav-widgets">
+                <div class="lang-selector"><span class="active">CA</span> <span>EN</span></div>
+                <div class="widget">☀️ 6°C</div>
+                <div class="widget" id="real-clock">🕒 --:--</div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Esdeveniments</h1>
+        <p>Tot el que passa a la ciutat, de la Fira Mediterrània a la Festa de la Llum.</p>
+    </header>
+
+    <main class="grid-cards">
+        <a href="#" class="card">
+            <div class="img-container"><img src="8.jpeg"></div>
+            <div class="card-content">
+                <span class="meta">Cultura • Octubre</span>
+                <h3>Fira Mediterrània</h3>
+                <p>Tres dies de música i arts d'arrel que transformen Manresa.</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div class="img-container"><img src="llum.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Tradició • Febrer</span>
+                <h3>Festa de la Llum</h3>
+                <p>Recordem el miracle de l'aigua al segle XIV.</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div class="img-container"><img src="aixada.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Mercat • Febrer</span>
+                <h3>Fira de l'Aixada</h3>
+                <p>El nucli antic torna a l'època medieval durant un cap de setmana.</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div class="img-container"><img src="kursaal.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Arts • Tot l'any</span>
+                <h3>Teatre Kursaal</h3>
+                <p>La joia de la corona de la programació teatral del Bages.</p>
+            </div>
+        </a>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
+                <p class="footer-tagline">Curat amb IA. Guiat per valors locals. No acceptem pagaments per aparèixer.</p>
+                <div class="footer-social"><a href="#">Instagram</a> <a href="#">TikTok</a> <a href="#">X</a></div>
+            </div>
+            <div class="footer-col">
+                <h3>Explora</h3>
+                <ul>
+                    <li><a href="gastronomia.html">Teca i Beguda</a></li>
+                    <li><a href="mediterrania.html">Esdeveniments</a></li>
+                    <li><a href="barris.html">Barris</a></li>
+                    <li><a href="tecnologia.html">Tech & Work</a></li>
+                    <li><a href="llum.html">Guies</a></li>
+                    <li><a href="noticies.html">News</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Transparència</h3>
+                <ul>
+                    <li><a href="legal.html">Avís Legal</a></li>
+                    <li><a href="legal.html#ia">Sobre l'IA</a></li>
+                    <li><a href="mailto:legal@manresa.is">Contacte</a></li>
+                </ul>
+                <div class="ai-badge">AI System Autonomous</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateClock() { const now = new Date(); const t = now.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit' }); const el = document.getElementById('real-clock'); if(el) el.innerHTML = `🕒 ${t}`; }
+        setInterval(updateClock, 1000); updateClock();
+    </script>
+</body>
+</html>
