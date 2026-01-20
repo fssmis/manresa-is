@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teca i Beguda | Manresa.is</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
+    
+    <style>
+        /* --- ESTILS UNIFICATS --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; border: 0 !important; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #fff; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+        .nav-logo, .footer-logo { font-family: 'Georgia', serif !important; }
+        h1, h2, h3 { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+
+        /* --- CAPÇALERA --- */
+        .top-nav { width: 100%; height: 64px; background: #fff; border-bottom: 1px solid #eee !important; position: sticky; top: 0; z-index: 10000; display: flex; align-items: center; }
+        .nav-container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
+        .punto-is { color: #f05a28 !important; }
+        .nav-menu { list-style: none; display: flex; gap: 20px; }
+        .nav-menu a { text-decoration: none; color: #4a4a4a; font-size: 0.85rem; font-weight: 600; }
+        .nav-menu a:hover { color: #f05a28; }
+        .nav-widgets { display: flex; align-items: center; gap: 10px; }
+        .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-size: 0.8rem; color: #64748b; font-weight: 600; }
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- HERO GASTRO --- */
+        .hero { text-align: center; padding: 60px 20px; background: #fcfcfc; border-bottom: 1px solid #eee !important; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; }
+        .hero p { color: #666; font-style: italic; max-width: 600px; margin: 0 auto; }
+
+        /* --- GRID RESTAURANTS (ACTUALITZAT A 4 COLUMNES) --- */
+        .section-header { text-align: center; margin: 50px 0 30px; }
+        .grid-cards { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); /* Forcem 4 columnes */
+            gap: 20px; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 20px 80px; 
+        }
+        .card { text-decoration: none; color: inherit; border: 1px solid #eee !important; border-radius: 12px; overflow: hidden; transition: 0.2s; background: #fff; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); border-color: #f05a28 !important; }
+        .img-container { width: 100%; height: 180px; background: #f9f9f9; overflow: hidden; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { padding: 20px; flex-grow: 1; }
+        .meta { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
+        .price-tag { color: #1a1a1a; font-weight: 800; font-size: 1.1rem; margin-top: 15px; display: block; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .card p { font-size: 0.85rem; color: #555; line-height: 1.4; }
+
+        /* --- FOOTER UNIFICAT --- */
+        .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 60px; text-align: left; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; align-items: start; }
+        .footer-logo { font-family: 'Georgia', serif; font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
+        .footer-tagline { font-family: sans-serif; color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
+        .footer-social { display: flex; gap: 15px; margin-bottom: 20px; }
+        .footer-social a { color: #f05a28; text-decoration: none; font-size: 0.85rem; font-weight: 600; font-family: sans-serif; }
+        .footer-col h3 { font-family: sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li a { text-decoration: none; color: #64748b; font-family: sans-serif; font-size: 0.95rem; }
+        .ai-badge { display: inline-block; margin-top: 20px; padding: 4px 10px; background: #f8fafc; border: 1px solid #e2e8f0 !important; border-radius: 4px; font-size: 0.7rem; color: #94a3b8; font-weight: bold; text-transform: uppercase; font-family: sans-serif; }
+
+        @media (max-width: 1150px) {
+            .nav-menu, .widget { display: none !important; }
+            .mobile-menu-btn { display: block; }
+            .nav-container { grid-template-columns: 1fr auto; }
+            .grid-cards { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) { .footer-container { grid-template-columns: 1fr; } .grid-cards { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">Manresa<span class="punto-is">.is</span></a>
+        <ul class="nav-menu">
+            <li><a href="gastronomia.html" style="color:#f05a28">Teca</a></li>
+            <li><a href="mediterrania.html">Events</a></li>
+            <li><a href="barris.html">Barris</a></li>
+            <li><a href="tecnologia.html">Tech</a></li>
+            <li><a href="llum.html">Guies</a></li>
+            <li><a href="noticies.html">News</a></li>
+        </ul>
+        <div class="nav-widgets">
+            <div class="widget" id="real-clock">🕒 --:--</div>
+            <div class="mobile-menu-btn">☰</div>
+        </div>
+    </div>
+</nav>
+
+    <header class="hero">
+        <h1>Teca i Beguda</h1>
+        <p>Una guia honesta per menjar bé a Manresa, sense filtres ni rànquings pagats.</p>
+    </header>
+
+    <main class="grid-cards">
+        <a href="#" class="card">
+            <div class="img-container"><img src="bacala.jpg" alt="Bacallà"></div>
+            <div class="card-content">
+                <span class="meta">Especialitat • El Clàssic</span>
+                <h3>El Bacallà de la Llum</h3>
+                <p>La joia de la corona de la cuina manresana. On tastar la recepta que ha passat de generació en generació.</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div class="img-container"><img src="menjar.jpg" alt="Menús"></div>
+            <div class="card-content">
+                <span class="meta">Guia • Menús del dia</span>
+                <h3>Menjar bé per 15€</h3>
+                <p>Els nostres racons preferits per fer un menú de migdia honest al voltant de la Plana de l'Om.</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div class="img-container"><img src="copavi.jpg" alt="Vins Bages"></div>
+            <div class="card-content">
+                <span class="meta">Beure • DO Pla de Bages</span>
+                <h3>Vins de la terra</h3>
+                <p>Explora el caràcter del Picapoll i els cellers que fan que el Bages sigui un referent vitivinícola.</p>
+            </div>
+        </a>
+        <a href="#" class="card">
+            <div class="img-container"><img src="pastisseria.jpg" alt="Pelegrins"></div>
+            <div class="card-content">
+                <span class="meta">Dolç • Tradició</span>
+                <h3>Els Pelegrins i més</h3>
+                <p>Un recorregut per les pastisseries centenàries de la ciutat que mantenen viu el llegat dolç.</p>
+            </div>
+        </a>
+    </main>
+
+<footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-col">
+            <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
+            <p class="footer-tagline">Curat amb IA. Guiat per valors locals. No acceptem pagaments per aparèixer a les nostres guies.</p>
+            <div class="footer-social"><a href="#">Instagram</a> <a href="#">TikTok</a> <a href="#">X</a></div>
+        </div>
+        <div class="footer-col">
+            <h3>Explora</h3>
+            <ul>
+                <li><a href="gastronomia.html">Teca i Beguda</a></li>
+                <li><a href="mediterrania.html">Events</a></li>
+                <li><a href="barris.html">Barris</a></li>
+                <li><a href="tecnologia.html">Tech & Work</a></li>
+                <li><a href="llum.html">Guies</a></li>
+                <li><a href="noticies.html">News</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>Transparència</h3>
+            <ul>
+                <li><a href="legal.html">Avís Legal</a></li>
+                <li><a href="legal.html#ia">Sobre l'ús de l'IA</a></li>
+                <li><a href="mailto:legal@manresa.is">Contacte Editorial</a></li>
+            </ul>
+            <div class="ai-badge">AI System Autonomous</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+        const t = now.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit', hour12: false });
+        const clockEl = document.getElementById('real-clock');
+        if(clockEl) clockEl.innerHTML = `🕒 ${t}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+</body>
+</html>
