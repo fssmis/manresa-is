@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-01-21",
+  "last_update": "2026-01-20",
   "config": {
     "site_name": "Manresa.is",
     "tagline": "Guia local honesta"
@@ -8,32 +8,17 @@
     {
       "filename": "index.html",
       "title": "Inici",
-      "html_content": "<header><h1>Manresa<i>.is</i></h1><p>Una guia curada per IA, però escrita amb el cor a la Catalunya Central. Sense publicitat, sense trampes, només la ciutat tal com és.</p></header><div class='grid'><h2>Seccions clau</h2><ul><li><a href='gastronomia.html'>🍴 Teca i Beguda</a>: On menjar sense que et prenguin el pèl.</li><li><a href='barris.html'>🏘️ Barris</a>: El pols de la ciutat, carrer a carrer.</li><li><a href='noticies.html'>📰 News</a>: Què passa avui al Cardener.</li><li><a href='llum.html'>💡 Guies</a>: De la Seu a la Cova, l'essencial.</li></ul></div>"
+      "html_content": "<h1>Manresa<i>.is</i></h1><p>Benvinguts a la guia autònoma de la ciutat. Avui el robot està aprenent a caminar.</p><nav><ul><li><a href='gastronomia.html'>Teca i Beguda</a></li><li><a href='noticies.html'>Notícies</a></li></ul></nav>"
     },
     {
       "filename": "gastronomia.html",
       "title": "Teca i Beguda",
-      "html_content": "<h1>On es menja de veritat</h1><p>Manresa té un gust especial. Aquí les nostres recomanacions honestes:</p><ul><li><strong>El Gra de Blat:</strong> El menú del dia per excel·lència. Producte de proximitat i un tracte de casa.</li><li><strong>Cau de l'Ateneu:</strong> Cuina creativa amb vistes al Kursaal. Ideal per quedar bé.</li><li><strong>La Gramola:</strong> No pots dir que ets de Manresa si no has menjat les seves braves a la Plana de l'Om.</li><li><strong>Restaurant Aligué:</strong> Un clàssic que mai falla per a celebracions serioses.</li></ul>"
-    },
-    {
-      "filename": "barris.html",
-      "title": "Barris",
-      "html_content": "<h1>Personalitat carrer a carrer</h1><div class='section'><h3>Nucli Antic</h3><p>Història pura. Carrers estrets que amaguen el Carrer del Balç i una vida veïnal que resisteix i es reinventa.</p></div><div class='section'><h3>El Passeig</h3><p>L'aparador de la ciutat. Modernisme, comerç i el lloc on tothom acaba passant tard o d'hora.</p></div><div class='section'><h3>Poble Nou i Sagrada Família</h3><p>Barris de tota la vida, tranquils i amb serveis, on es fa la vida real fora del circuit turístic.</p></div>"
+      "html_content": "<h1>On menjar avui</h1><ul><li><strong>Batzac:</strong> Cuina de mercat i proximitat al cor de la ciutat.</li><li><strong>La Gramola:</strong> El temple del vermut i les braves.</li></ul>"
     },
     {
       "filename": "noticies.html",
       "title": "News",
-      "html_content": "<h1>Què bull a la ciutat</h1><ul><li><strong>Fira de l'Aixada 2026:</strong> Ja s'han confirmat les dates pel proper mes. El Nucli Antic tornarà al segle XIV.</li><li><strong>Èxit al Kursaal:</strong> La programació de teatre d'aquest cap de setmana ha exhaurit entrades en temps rècord.</li><li><strong>Mobilitat:</strong> Noves obres de millora al voltant de la Bonavista per pacificar el trànsit.</li></ul>"
-    },
-    {
-      "filename": "llum.html",
-      "title": "Guies Essencials",
-      "html_content": "<h1>Descobrir Manresa</h1><p>Si només tens un dia, no et perdis això:</p><ul><li><strong>La Seu:</strong> Gòtic català en estat pur dominant el skyline.</li><li><strong>La Cova de Sant Ignasi:</strong> Patrimoni mundial i un lloc de pau absoluta.</li><li><strong>Carrer del Balç:</strong> Un viatge en el temps sota terra.</li><li><strong>Anella Verda:</strong> Camina fins a la Torre de Santa Caterina per les millors vistes.</li></ul>"
-    },
-    {
-      "filename": "tecnologia.html",
-      "title": "Tech & Work",
-      "html_content": "<h1>Ecosistema Digital</h1><p>Manresa no és només història, és futur.</p><ul><li><strong>UPC Manresa:</strong> Talent tecnològic des del Bages cap al món.</li><li><strong>Espais de Coworking:</strong> On es couen les noves startups locals.</li><li><strong>Itinerari Industrial:</strong> De les fàbriques tèxtils a la indústria 4.0.</li></ul>"
+      "html_content": "<h1>Última hora</h1><ul><li><strong>Fira de l'Aixada:</strong> S'acosta el mercat medieval més gran del Bages. Ja pots preparar la teva túnica.</li><li><strong>Sistema Activat:</strong> Manresa.is ja funciona amb actualitzacions autònomes.</li></ul>"
     }
   ]
 }
