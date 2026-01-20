@@ -1,0 +1,24 @@
+{
+  "last_update": "2026-01-21",
+  "config": {
+    "site_name": "Manresa.is",
+    "tagline": "Guia local honesta"
+  },
+  "pages": [
+    {
+      "filename": "index.html",
+      "title": "Inici",
+      "html_content": "<h1>Manresa.is <i>autèntica</i></h1><p>Benvinguts a la guia curada per IA.</p>"
+    },
+    {
+      "filename": "gastronomia.html",
+      "title": "Teca i Beguda",
+      "html_content": "<h1>On menjar</h1><ul><li>El Gra de Blat (Menú 12€)</li><li>La Gramola (Braves)</li></ul>"
+    },
+    {
+        "filename": "noticies.html",
+        "title": "News",
+        "html_content": "<h1>Notícies del Cardener</h1><p>Avui la Fira de l'Aixada ha confirmat dates...</p>"
+    }
+  ]
+}
