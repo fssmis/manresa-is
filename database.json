@@ -8,17 +8,22 @@
     {
       "filename": "index.html",
       "title": "Inici",
-      "html_content": "<h1>Manresa<i>.is</i></h1><p>Benvinguts a la guia autònoma de la ciutat. Avui el robot està aprenent a caminar.</p><nav><ul><li><a href='gastronomia.html'>Teca i Beguda</a></li><li><a href='noticies.html'>Notícies</a></li></ul></nav>"
+      "html_content": "<h1>Manresa<i>.is</i></h1><p>La guia que no et vol vendre res. Només el millor de la nostra ciutat, filtrat per intel·ligència artificial i sentit comú local.</p><nav><a href='gastronomia.html'>Teca i Beguda</a> | <a href='barris.html'>Patrimoni</a> | <a href='noticies.html'>News</a></nav>"
     },
     {
       "filename": "gastronomia.html",
       "title": "Teca i Beguda",
-      "html_content": "<h1>On menjar avui</h1><ul><li><strong>Batzac:</strong> Cuina de mercat i proximitat al cor de la ciutat.</li><li><strong>La Gramola:</strong> El temple del vermut i les braves.</li></ul>"
+      "html_content": "<h1>On menjar de veritat</h1><ul><li><strong>Batzac:</strong> Cuina de mercat brutal. <i>Recomanació de la casa:</i> Has de tastar l'arròs, és el millor de la ciutat.</li><li><strong>La Gramola:</strong> El lloc on batega el centre. Vermut i braves imprescindibles.</li></ul>"
+    },
+    {
+      "filename": "barris.html",
+      "title": "Barris i Patrimoni",
+      "html_content": "<h1>Secrets de la ciutat</h1><div class='highlight'><h3>Carrer del Balç</h3><p>Un viatge al segle XIV sense moure't de Manresa. Un carrer medieval cobert que és una joia única a Europa.</p></div>"
     },
     {
       "filename": "noticies.html",
-      "title": "News",
-      "html_content": "<h1>Última hora</h1><ul><li><strong>Fira de l'Aixada:</strong> S'acosta el mercat medieval més gran del Bages. Ja pots preparar la teva túnica.</li><li><strong>Sistema Activat:</strong> Manresa.is ja funciona amb actualitzacions autònomes.</li></ul>"
+      "title": "Notícies",
+      "html_content": "<h1>Última hora</h1><p>La Fira de l'Aixada ja es respira a l'ambient. Manresa es prepara per tornar al passat medieval.</p>"
     }
   ]
 }
