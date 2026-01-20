@@ -7,165 +7,66 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
     
     <style>
-        /* --- RESET I BASES (Estil Malaga.is) --- */
+        /* --- RESET I BASES --- */
         * { margin: 0; padding: 0; box-sizing: border-box; border: 0 !important; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #fff; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
         
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            background-color: #fff; 
-            color: #1a1a1a; 
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
+        /* IDENTITAT */
+        .nav-logo, .footer-logo, .manresais-fixed, #dynamic-text, .batzac-word h2 { font-family: 'Georgia', serif !important; }
+        .punto-is { color: #f05a28 !important; }
 
-        /* --- IDENTITAT GEORGIA --- */
-        .nav-logo, .footer-logo, .manresais-fixed, #dynamic-text { 
-            font-family: 'Georgia', serif !important; 
-        }
-
-        /* --- TÍTOLS MODERNS (Sans-Serif) --- */
-        h1, h2, h3, .section-header h2 { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-
-        /* --- CAPÇALERA --- */
+        /* NAVEGACIÓ */
         .top-nav { width: 100%; height: 64px; background: #fff; border-bottom: 1px solid #eee !important; position: sticky; top: 0; z-index: 10000; display: flex; align-items: center; }
         .nav-container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; }
         .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; justify-self: start; }
-        .punto-is { color: #f05a28 !important; }
         .nav-menu { list-style: none; display: flex; gap: 20px; justify-self: center; }
-        .nav-menu a { text-decoration: none; color: #4a4a4a; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
-        .nav-menu a:hover { color: #f05a28 !important; }
+        .nav-menu a { text-decoration: none; color: #4a4a4a; font-size: 0.85rem; font-weight: 600; }
         .nav-widgets { display: flex; align-items: center; gap: 10px; justify-self: end; }
-        .lang-selector { font-size: 0.75rem; font-weight: bold; color: #bbb; border-right: 1px solid #eee !important; padding-right: 10px; display: flex; gap: 5px; }
-        .lang-selector .active { color: #f05a28 !important; }
         .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-size: 0.8rem; color: #64748b; border: 1px solid #eee !important; display: flex; align-items: center; gap: 5px; font-weight: 600; }
-        .mobile-menu-btn { display: none; font-size: 1.8rem; cursor: pointer; padding: 5px 10px; }
 
-        /* --- MENÚ MÒBIL --- */
-        .mobile-nav { display: none; flex-direction: column; background: #fff; width: 100%; position: fixed; top: 64px; left: 0; height: calc(100vh - 64px); z-index: 9999; border-top: 1px solid #eee !important; overflow-y: auto; }
-        .mobile-nav.open { display: flex; }
-        .mobile-nav a { padding: 20px 25px; text-decoration: none; color: #1a1a1a; font-weight: 600; border-bottom: 1px solid #f5f5f5 !important; }
-
-        /* --- HERO AMB M GÒTICA --- */
+        /* HERO CENTRAT */
         .hero { text-align: center; padding: 80px 20px 40px; display: flex; flex-direction: column; align-items: center; }
         .logo-m { width: 110px; margin-bottom: 30px; }
-        .hero h1 { display: flex; justify-content: center; align-items: baseline; width: 100%; font-size: clamp(1.8rem, 5vw, 3.5rem); font-weight: 400; letter-spacing: -1.5px; }
-        .manresais-fixed { white-space: nowrap; flex-shrink: 0; font-weight: bold; }
-        .dynamic-box { display: inline-block; text-align: left; min-width: 300px; margin-left: 12px; }
-        #dynamic-text { font-style: italic; color: #4a4a4a; transition: opacity 0.4s ease, transform 0.4s ease; display: inline-block; }
+        .hero h1 { display: flex; justify-content: center; align-items: baseline; width: 100%; font-size: clamp(1.8rem, 5vw, 3.5rem); letter-spacing: -1.5px; }
+        .manresais-fixed { font-weight: bold; flex: 1; text-align: right; white-space: nowrap; }
+        .dynamic-box { flex: 1; text-align: left; min-width: 300px; margin-left: 12px; }
+        #dynamic-text { font-style: italic; color: #4a4a4a; transition: opacity 0.4s ease; display: inline-block; }
 
-        /* --- GRID CARDS --- */
+        /* SECCIONS I GRIDS */
         .section-header { text-align: center; margin: 60px 0 30px; }
-        .section-header h2 { font-size: 2rem; margin-bottom: 8px; }
+        .section-header h2 { font-size: 2rem; margin-bottom: 8px; font-weight: 800; letter-spacing: -0.02em; }
         .section-header p { color: #666; font-size: 1rem; }
+        
         .grid-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; max-width: 1400px; margin: 0 auto; padding: 0 20px 60px; }
-        .card { text-decoration: none; color: inherit; display: flex; flex-direction: column; border: 1px solid #eee !important; border-radius: 10px; overflow: hidden; transition: transform 0.2s; background: #fff; }
-        .card:hover { transform: translateY(-4px); }
+        .card { text-decoration: none; color: inherit; display: flex; flex-direction: column; border: 1px solid #eee !important; border-radius: 10px; overflow: hidden; transition: 0.2s; background: #fff; }
+        .card:hover { transform: translateY(-4px); border-color: #f05a28 !important; }
         .img-container { width: 100%; height: 180px; overflow: hidden; background: #f9f9f9; }
         .card img { width: 100%; height: 100%; object-fit: cover; }
         .card-content { padding: 20px; }
-        .meta { font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 10px; display: block; }
+        .meta { font-size: 0.65rem; font-weight: 800; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 10px; display: block; }
+        .card h3 { font-size: 1.2rem; margin-bottom: 8px; line-height: 1.2; }
 
-        /* --- FOOTER FINAL ALINEAT (Estil 66.jpg) --- */
-.main-footer { 
-    background-color: #fff; 
-    padding: 60px 0; 
-    width: 100%;
-    border-top: 1px solid #eee !important;
-    text-align: left; 
-}
+        /* SECCIÓ BATZAC */
+        .batzac-container { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center; max-width: 1400px; margin: 0 auto; padding: 60px 20px; }
+        .batzac-word h2 { font-size: 4rem; margin: 10px 0; line-height: 1; font-weight: 400; }
+        .batzac-quote { background: #f9f9f9; padding: 40px; border-radius: 8px; border-top: 4px solid #f05a28 !important; }
 
-.footer-container { 
-    max-width: 1400px; 
-    margin: 0 auto; 
-    padding: 0 20px; 
-    display: grid; 
-    /* Tres columnes clares: la primera ocupa més espai */
-    grid-template-columns: 2fr 1fr 1fr; 
-    gap: 20px; 
-    align-items: start;
-}
+        /* FOOTER COMPACTE (Estil 66.jpg) */
+        .main-footer { background-color: #fff; padding: 60px 0; width: 100%; border-top: 1px solid #eee !important; text-align: left; }
+        .footer-container { max-width: 1400px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; align-items: start; }
+        .footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; display: block; text-decoration: none; color: #1a1a1a; }
+        .footer-tagline { color: #64748b; font-size: 0.9rem; line-height: 1.3; margin-bottom: 20px; max-width: 450px; }
+        .footer-social { display: flex; gap: 15px; }
+        .footer-social a { color: #f05a28; text-decoration: none; font-size: 0.85rem; font-weight: 700; }
+        .footer-col h3 { font-size: 0.85rem; font-weight: 800; margin-bottom: 15px; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 3px; line-height: 1.1; } /* ESPAI VERTICAL COMPACTE */
+        .footer-col ul li a { text-decoration: none; color: #64748b; font-size: 0.9rem; }
+        .ai-badge { display: inline-block; margin-top: 15px; padding: 4px 10px; background: #fff; border: 1px solid #e2e8f0 !important; border-radius: 4px; font-size: 0.65rem; color: #94a3b8; font-weight: bold; text-transform: uppercase; }
 
-.footer-logo { 
-    font-family: 'Georgia', serif; 
-    font-size: 1.8rem; 
-    font-weight: bold; 
-    margin-bottom: 10px; 
-    display: block; 
-    text-decoration: none; 
-    color: #1a1a1a; 
-}
-
-.footer-tagline { 
-    color: #64748b; 
-    font-size: 0.9rem; 
-    line-height: 1.3; 
-    margin-bottom: 20px;
-    max-width: 450px;
-}
-
-.footer-social { display: flex; gap: 15px; }
-.footer-social a { 
-    color: #f05a28; /* Taronja com a la foto */
-    text-decoration: none; 
-    font-size: 0.85rem; 
-    font-weight: 700; 
-    font-family: -apple-system, sans-serif;
-}
-
-.footer-col h3 { 
-    font-size: 0.85rem; 
-    font-weight: 800; 
-    margin-bottom: 15px; 
-    color: #1a1a1a; 
-    text-transform: uppercase; 
-    letter-spacing: 1px; 
-    font-family: -apple-system, sans-serif;
-}
-
-.footer-col ul { list-style: none; }
-
-.footer-col ul li { 
-    margin-bottom: 3px; /* Espai vertical apretat */
-    line-height: 1.1; 
-}
-
-.footer-col ul li a { 
-    text-decoration: none; 
-    color: #64748b; 
-    font-size: 0.9rem; 
-    font-family: -apple-system, sans-serif;
-}
-
-.ai-badge { 
-    display: inline-block; 
-    margin-top: 15px; 
-    padding: 4px 10px; 
-    background: #fff; 
-    border: 1px solid #e2e8f0 !important; 
-    border-radius: 4px; 
-    font-size: 0.65rem; 
-    color: #94a3b8; 
-    font-weight: bold; 
-    text-transform: uppercase;
-}
-
-/* Responsivitat per a mòbils */
-@media (max-width: 850px) {
-    .footer-container { grid-template-columns: 1fr; gap: 40px; }
-}
-        @media (max-width: 1150px) {
-            .nav-menu, .lang-selector, .widget { display: none !important; }
-            .mobile-menu-btn { display: block; }
-            .nav-container { grid-template-columns: 1fr auto; }
-            .grid-cards { grid-template-columns: repeat(2, 1fr); }
-            .hero h1 { flex-direction: column; align-items: center; }
-            .dynamic-box { text-align: center; margin-left: 0; min-width: auto; }
-        }
-        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } }
+        /* RESPONSIVE */
+        @media (max-width: 1150px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } .nav-menu { display: none; } }
+        @media (max-width: 768px) { .footer-container { grid-template-columns: 1fr; gap: 40px; } .hero h1 { flex-direction: column; align-items: center; } .manresais-fixed { text-align: center; } .dynamic-box { text-align: center; margin-left: 0; min-width: auto; } .batzac-container { grid-template-columns: 1fr; gap: 30px; } }
     </style>
 </head>
 <body>
@@ -174,131 +75,86 @@
     <div class="nav-container">
         <a href="index.html" class="nav-logo">Manresa<span class="punto-is">.is</span></a>
         <ul class="nav-menu">
-            <li><a href="gastronomia.html">Teca i Beguda</a></li>
-            <li><a href="mediterrania.html">Esdeveniments</a></li>
+            <li><a href="gastronomia.html">Teca</a></li>
+            <li><a href="mediterrania.html">Events</a></li>
             <li><a href="barris.html">Barris</a></li>
-            <li><a href="tecnologia.html">Tech & Work</a></li>
+            <li><a href="tecnologia.html">Tech</a></li>
             <li><a href="llum.html">Guies</a></li>
             <li><a href="noticies.html">News</a></li>
         </ul>
         <div class="nav-widgets">
-            <div class="lang-selector"><span class="active">CA</span> <span>EN</span></div>
-            <div class="widget">☀️ 6°C</div>
+            <div class="widget">☀️ 8°C</div>
             <div class="widget" id="real-clock">🕒 --:--</div>
-            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
         </div>
     </div>
 </nav>
-
-<div class="mobile-nav" id="mobileNav">
-    <a href="gastronomia.html">Teca i Beguda</a>
-    <a href="mediterrania.html">Esdeveniments</a>
-    <a href="barris.html">Barris</a>
-    <a href="tecnologia.html">Tech & Work</a>
-    <a href="llum.html">Guies</a>
-    <a href="noticies.html">News</a>
-    <div style="padding: 20px 25px; color: #bbb; font-weight: bold; font-family: sans-serif;">CA | EN</div>
-</div>
 
 <header class="hero">
     <div class="logo-m">
         <svg viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
             <path fill="#f05a28" d="M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z" />
             <path fill="#f05a28" d="M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z" />
-            <polygon fill="white" opacity="0.6" points="15,20 25,15 20,30" />
-            <polygon fill="white" opacity="0.6" points="40,25 55,20 45,35" />
-            <polygon fill="white" opacity="0.6" points="70,15 85,25 75,30" />
-            <polygon fill="white" opacity="0.6" points="30,45 40,55 25,60" />
-            <polygon fill="white" opacity="0.6" points="65,50 80,45 75,65" />
         </svg>
     </div>
     <h1><span class="manresais-fixed">Manresa<span class="punto-is">.is</span></span> <span class="dynamic-box"><span id="dynamic-text">autèntica</span></span></h1>
 </header>
 
-<div class="section-header"><h2>Guies essencials</h2><p>Tot el que cal per no semblar un turista.</p></div>
-<main class="grid-cards">
-    <a href="llum.html" class="card">
-        <div class="img-container"><img src="hores.jpg"></div>
-        <div class="card-content"><span class="meta">Guies</span><h3>48h a Manresa</h3><p>L'itinerari definitiu per descobrir l'ànima de la ciutat.</p></div>
-    </a>
-    <a href="barris.html" class="card">
-        <div class="img-container"><img src="nucliantic.jpg"></div>
-        <div class="card-content"><span class="meta">Barris</span><h3>El Nucli Antic</h3><p>Secrets medievals i racons amagats que no surten als mapes oficials.</p></div>
-    </a>
-    <a href="natura.html" class="card">
-        <div class="img-container"><img src="anellaverda.jpg"></div>
-        <div class="card-content"><span class="meta">Natura</span><h3>L'Anella Verda</h3><p>Desconnexió total sense sortir del terme municipal.</p></div>
-    </a>
-    <a href="modernisme.html" class="card">
-        <div class="img-container"><img src="7.jpg"></div>
-        <div class="card-content"><span class="meta">Arquitectura</span><h3>Modernisme</h3><p>Les joies industrials i burgeses que defineixen la ciutat.</p></div>
-    </a>
+<main>
+    <div class="section-header"><h2>Guies essencials</h2><p>Tot el que cal per no semblar un turista.</p></div>
+    <div class="grid-cards">
+        <a href="llum.html" class="card"><div class="img-container"><img src="hores.jpg"></div><div class="card-content"><span class="meta">Guies</span><h3>48h a Manresa</h3><p>L'itinerari definitiu per descobrir l'ànima de la ciutat.</p></div></a>
+        <a href="barris.html" class="card"><div class="img-container"><img src="nucliantic.jpg"></div><div class="card-content"><span class="meta">Barris</span><h3>El Nucli Antic</h3><p>Secrets medievals i racons amagats.</p></div></a>
+        <a href="natura.html" class="card"><div class="img-container"><img src="anellaverda.jpg"></div><div class="card-content"><span class="meta">Natura</span><h3>L'Anella Verda</h3><p>Desconnexió total sense sortir del terme municipal.</p></div></a>
+        <a href="modernisme.html" class="card"><div class="img-container"><img src="7.jpg"></div><div class="card-content"><span class="meta">Arquitectura</span><h3>Modernisme</h3><p>Les joies industrials que defineixen la ciutat.</p></div></a>
+    </div>
+
+    <div class="section-header"><h2>Tendències setmanals</h2><p>El més llegit aquest gener.</p></div>
+    <div class="grid-cards">
+        <a href="gastronomia.html" class="card"><div class="img-container"><img src="menjar.jpg"></div><div class="card-content"><span class="meta">Teca</span><h3>On dinar divendres</h3><p>Els millors menús del dia al voltant de la Plana.</p></div></a>
+        <a href="mediterrania.html" class="card"><div class="img-container"><img src="8.jpeg"></div><div class="card-content"><span class="meta">Cultura</span><h3>Fira Mediterrània</h3><p>Guia honesta per viure la gran festa.</p></div></a>
+        <a href="#" class="card"><div class="img-container"><img src="9.jpg"></div><div class="card-content"><span class="meta">Top 10</span><h3>Postals del Cardener</h3><p>Els punts exactes per fotografiar la Seu.</p></div></a>
+        <a href="bacalla.html" class="card"><div class="img-container"><img src="bacala.jpg"></div><div class="card-content"><span class="meta">Gastro</span><h3>Bacallà de la Llum</h3><p>On tastar la recepta tradicional.</p></div></a>
+    </div>
+
+    <div class="section-header"><h2>Últimes notícies</h2><p>Històries noves del 20 de gener.</p></div>
+    <div class="grid-cards">
+        <a href="#" class="card"><div class="img-container"><img src="roca.jpg"></div><div class="card-content"><span class="meta">Comerç</span><h3>Botigues Històriques</h3><p>Recorregut pels establiments centenaris.</p></div></a>
+        <a href="#" class="card"><div class="img-container"><img src="copavi.jpg"></div><div class="card-content"><span class="meta">Nit</span><h3>On prendre una copa</h3><p>Terrasses i bars amb encant.</p></div></a>
+        <a href="#" class="card"><div class="img-container"><img src="kursaal.jpg"></div><div class="card-content"><span class="meta">Agenda</span><h3>El Kursaal bull</h3><p>Música i teatre pel cap de setmana.</p></div></a>
+        <a href="balc.html" class="card"><div class="img-container"><img src="10.jpg"></div><div class="card-content"><span class="meta">Patrimoni</span><h3>Carrer del Balç</h3><p>El tresor medieval amagat sota la ciutat.</p></div></a>
+    </div>
+
+    <section class="batzac-container">
+        <div class="batzac-word">
+            <span style="text-transform: uppercase; font-size: 0.7rem; font-weight: 800; color: #f05a28; font-family: sans-serif;">Parlar de Manresa</span>
+            <h2>Esgrogueït</h2>
+            <p style="font-style: italic; color: #666;">"Tenir un color groc a la pell, generalment per fred o malaltia."</p>
+        </div>
+        <div class="batzac-quote">
+            <strong style="font-family: sans-serif; font-size: 0.8rem; text-transform: uppercase;">L'Agent Tifa diu:</strong>
+            <p style="font-size: 1.1rem; color: #333; margin-top: 15px;">"Escolta, pardal! Tapa't bé el coll que fa una rasca que et quedaràs esgrogueït abans d'arribar a Crist Rei!"</p>
+        </div>
+    </section>
 </main>
-
-<div class="section-header"><h2>Tendències setmanals</h2><p>Què està llegint la gent ara mateix.</p></div>
-<div class="grid-cards">
-    <a href="gastronomia.html" class="card">
-        <div class="img-container"><img src="menjar.jpg"></div>
-        <div class="card-content"><span class="meta">Teca</span><h3>On dinar divendres</h3><p>Els millors menús del dia al voltant de la Plana de l'Om.</p></div>
-    </a>
-    <a href="mediterrania.html" class="card">
-        <div class="img-container"><img src="8.jpeg"></div>
-        <div class="card-content"><span class="meta">Cultura</span><h3>Fira Mediterrània</h3><p>Guia honesta per viure la gran festa com un local.</p></div>
-    </a>
-    <a href="#" class="card">
-        <div class="img-container"><img src="9.jpg" style="filter: hue-rotate(45deg);"></div>
-        <div class="card-content"><span class="meta">Top 10</span><h3>Postals del Cardener</h3><p>Els punts exactes per fer la millor foto de la Seu.</p></div>
-    </a>
-    <a href="bacalla.html" class="card">
-        <div class="img-container"><img src="bacala.jpg"></div>
-        <div class="card-content"><span class="meta">Gastro</span><h3>El Bacallà de la Llum</h3><p>On tastar la recepta tradicional aquest gener.</p></div>
-    </a>
-</div>
-
-<div class="section-header"><h2>Últimes notícies</h2><p>Històries noves, sense farciment.</p></div>
-<div class="grid-cards">
-    <a href="#" class="card">
-        <div class="img-container"><img src="roca.jpg"></div>
-        <div class="card-content"><span class="meta">Comerç</span><h3>Botigues amb Història</h3><p>Un recorregut pels establiments centenaris del centre.</p></div>
-    </a>
-    <a href="#" class="card">
-        <div class="img-container"><img src="copavi.jpg"></div>
-        <div class="card-content"><span class="meta">Nit</span><h3>On prendre una copa</h3><p>Bars amb encant i terrasses per quan s'amaga el sol.</p></div>
-    </a>
-    <a href="#" class="card">
-        <div class="img-container"><img src="kursaal.jpg"></div>
-        <div class="card-content"><span class="meta">Agenda</span><h3>El Kursaal bull</h3><p>Música i teatre per no quedar-se a casa el cap de setmana.</p></div>
-    </a>
-    <a href="balc.html" class="card">
-        <div class="img-container"><img src="10.jpg"></div>
-        <div class="card-content"><span class="meta">Patrimoni</span><h3>Carrer del Balç</h3><p>El tresor medieval amagat sota la ciutat vella.</p></div>
-    </a>
-</div>
 
 <footer class="main-footer">
     <div class="footer-container">
         <div class="footer-col">
             <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
             <p class="footer-tagline">Curat amb IA. Guiat per valors locals. No acceptem pagaments per aparèixer.</p>
-            <div class="footer-social">
-                <a href="#">Instagram</a> 
-                <a href="#">TikTok</a> 
-                <a href="#">X</a>
-            </div>
+            <div class="footer-social"><a href="#">Instagram</a> <a href="#">TikTok</a> <a href="#">X</a></div>
         </div>
-        
         <div class="footer-col">
             <h3>Explora</h3>
             <ul>
                 <li><a href="gastronomia.html">Teca i Beguda</a></li>
-                <li><a href="mediterrania.html">Esdeveniments</a></li>
+                <li><a href="mediterrania.html">Events</a></li>
                 <li><a href="barris.html">Barris</a></li>
                 <li><a href="tecnologia.html">Tech & Work</a></li>
                 <li><a href="llum.html">Guies</a></li>
                 <li><a href="noticies.html">News</a></li>
             </ul>
         </div>
-        
         <div class="footer-col">
             <h3>Transparència</h3>
             <ul>
@@ -306,43 +162,26 @@
                 <li><a href="legal.html#ia">Sobre l'IA</a></li>
                 <li><a href="mailto:legal@manresa.is">Contacte</a></li>
             </ul>
-            <div class="ai-badge">AI System Autonomous</div>
+            <div class="ai-badge">AI System Autonomous v2.6</div>
         </div>
     </div>
 </footer>
 
 <script>
-    function toggleMenu() {
-        const menu = document.getElementById('mobileNav');
-        menu.classList.toggle('open');
-        document.body.style.overflow = menu.classList.contains('open') ? 'hidden' : 'auto';
-    }
     function updateClock() {
         const now = new Date();
         const t = now.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit', hour12: false });
         const el = document.getElementById('real-clock');
         if(el) el.innerHTML = `🕒 ${t}`;
     }
-    setInterval(updateClock, 1000);
-    updateClock();
+    setInterval(updateClock, 1000); updateClock();
 
-    const paraules = ["autèntica", "viva", "màgica", "única", "honesta", "sincera", "real", "teva", "humana", "compartida", "propera"]; 
-    let i = 0; 
-    const textElement = document.getElementById("dynamic-text");
-    function canviarParaula() {
-        textElement.style.opacity = 0;
-        textElement.style.transform = "translateY(-5px)";
-        setTimeout(() => {
-            i = (i + 1) % paraules.length;
-            textElement.innerHTML = paraules[i];
-            textElement.style.transform = "translateY(5px)";
-            setTimeout(() => {
-                textElement.style.opacity = 1;
-                textElement.style.transform = "translateY(0)";
-            }, 50);
-        }, 400);
-    }
-    setInterval(canviarParaula, 3000);
+    const words = ["autèntica", "viva", "màgica", "única", "honesta", "teva"]; 
+    let i = 0; const textEl = document.getElementById("dynamic-text");
+    setInterval(() => {
+        textEl.style.opacity = 0;
+        setTimeout(() => { i = (i + 1) % words.length; textEl.innerHTML = words[i]; textEl.style.opacity = 1; }, 500);
+    }, 3000);
 </script>
 
 </body>
