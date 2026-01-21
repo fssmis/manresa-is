@@ -6,12 +6,12 @@
     <title>Divulgació d'IA | Manresa.is</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
     <style>
-        /* CONFIGURACIÓ GLOBAL ESTIL MÀLAGA */
+        /* ESTIL MÀLAGA CLONAT */
         * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            font-size: 1.125rem; /* 18px */
+            font-size: 1.125rem; /* 18px Mida Málaga */
             line-height: 1.7; 
             color: #333; 
             background-color: #fff;
@@ -25,18 +25,21 @@
 
         .punto-is { color: #f05a28 !important; }
 
-        /* NAVEGACIÓ - ALINEADA AMB EL CONTINGUT */
+        /* CAPÇALERA MANRESA (INDEX) */
         .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 10000; }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
         .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; }
         .nav-menu { list-style: none; display: flex; gap: 18px; }
         .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; }
         .nav-menu a:hover { color: #f05a28 !important; }
         .widget { background: #f9f9f9; padding: 6px 14px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; font-weight: 600; }
 
-        /* CONTINGUT PRINCIPAL - ALINEACIÓ FIXA A 1200PX (AMB PADDING) O 800PX PER LECTURA */
-        .legal-content { max-width: 1200px; margin: 80px auto; padding: 0 20px; }
-        .text-wrapper { max-width: 800px; } /* El text en sí no ha d'ocupar 1200px per llegibilitat */
+        /* CONTINGUT DIVULGACIÓ - MÀXIMA CONCENTRACIÓ (ESTIL MÀLAGA) */
+        .legal-content { 
+            max-width: 680px; /* Ample de lectura Málaga */
+            margin: 80px auto; 
+            padding: 0 20px; 
+        }
 
         .compliance-badge { display: inline-block; background: #fdf2f0; color: #f05a28; padding: 4px 12px; border-radius: 4px; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; border: 1px solid #fde6de !important; font-family: sans-serif; letter-spacing: 0.5px; }
         
@@ -45,38 +48,35 @@
         
         .intro-quote { border-left: 3px solid #f05a28 !important; padding: 25px 35px; font-style: italic; font-size: 1.45rem; color: #444; background: #fffcfb; margin: 45px 0; line-height: 1.5; }
         
-        .resum-box { background: #f8fafc; padding: 40px; border-radius: 12px; margin: 45px 0; border: 1px solid #e2e8f0 !important; }
-        .resum-box h3 { margin-bottom: 25px; font-family: sans-serif !important; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
+        .resum-box { background: #f8fafc; padding: 35px; border-radius: 12px; margin: 40px 0; border: 1px solid #e2e8f0 !important; }
+        .resum-box h3 { margin-bottom: 20px; font-family: sans-serif !important; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
         .resum-box li { list-style: none; margin-bottom: 15px; padding-left: 25px; position: relative; font-weight: 500; }
         .resum-box li::before { content: "●"; color: #f05a28; position: absolute; left: 0; font-size: 0.9rem; }
 
-        h2 { font-size: 1.9rem; margin: 70px 0 30px; font-weight: 400; border-bottom: 1px solid #eee !important; padding-bottom: 15px; letter-spacing: -1px; }
-        h3 { font-size: 1.3rem; margin: 40px 0 15px; font-weight: 700; font-family: sans-serif !important; }
+        h2 { font-size: 1.8rem; margin: 60px 0 25px; font-weight: 400; border-bottom: 1px solid #eee !important; padding-bottom: 15px; letter-spacing: -1px; }
+        h3 { font-size: 1.2rem; margin: 35px 0 15px; font-weight: 700; font-family: sans-serif !important; }
         p { margin-bottom: 25px; }
 
-        .code-block { background: #1a1a1a; color: #d4d4d4; padding: 30px; border-radius: 8px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 0.85rem; overflow-x: auto; margin: 35px 0; line-height: 1.5; }
+        .code-block { background: #1a1a1a; color: #d4d4d4; padding: 25px; border-radius: 8px; font-family: 'SFMono-Regular', Consolas, monospace; font-size: 0.85rem; overflow-x: auto; margin: 35px 0; line-height: 1.5; }
 
         .hr-divider { height: 1px; background-color: #eee; border: 0; margin: 60px 0; }
 
-        /* PÀGINES RELACIONADES */
-        .related-pages h4 { font-size: 1.4rem; margin-bottom: 25px; }
-        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; }
-        .btn-related { background: #f1f5f9; color: #475569; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-family: sans-serif; font-size: 0.95rem; font-weight: 600; transition: background 0.2s; }
-        .btn-related:hover { background: #e2e8f0; }
+        .related-pages h4 { font-size: 1.3rem; margin-bottom: 20px; }
+        .btn-group { display: flex; gap: 10px; }
+        .btn-related { background: #f1f5f9; color: #475569; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-family: sans-serif; font-size: 0.9rem; font-weight: 600; }
 
-        /* FOOTER - ALINEACIÓ EXACTA AMB CONTINGUT */
-        footer { background: #fff; padding: 100px 0; border-top: 1px solid #eee !important; margin-top: 100px; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 40px; padding: 0 20px; }
+        /* FOOTER MANRESA (INDEX) - AMBLE 1400PX */
+        footer { background: #fff; padding: 80px 0; border-top: 1px solid #eee !important; margin-top: 100px; }
+        .footer-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding: 0 20px; }
         .footer-logo { font-size: 1.8rem; font-weight: bold; text-decoration: none; display: block; margin-bottom: 15px; }
         .footer-tagline { color: #64748b; font-size: 0.95rem; line-height: 1.6; max-width: 400px; margin-bottom: 25px; font-family: sans-serif; }
-        .footer-col h3 { font-family: sans-serif !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; color: #1a1a1a; }
+        .footer-col h3 { font-family: sans-serif !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 25px; color: #1a1a1a; }
         .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #64748b; text-decoration: none; font-size: 1rem; font-family: sans-serif; }
-        .footer-links a:hover { color: #f05a28; }
-        .system-status { display: inline-block; margin-top: 25px; padding: 6px 14px; border: 1px solid #e2e8f0 !important; border-radius: 4px; font-size: 0.65rem; color: #94a3b8; font-weight: bold; text-transform: uppercase; font-family: sans-serif; letter-spacing: 0.8px; }
+        .footer-links li { margin-bottom: 10px; }
+        .footer-links a { color: #64748b; text-decoration: none; font-size: 0.95rem; font-family: sans-serif; }
+        .system-status { display: inline-block; margin-top: 20px; padding: 5px 12px; border: 1px solid #e2e8f0 !important; border-radius: 4px; font-size: 0.65rem; color: #94a3b8; font-weight: bold; text-transform: uppercase; font-family: sans-serif; }
 
-        @media (max-width: 1100px) { .nav-menu { display: none; } .footer-container { grid-template-columns: 1fr; gap: 60px; } }
+        @media (max-width: 1100px) { .nav-menu { display: none; } .footer-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -100,58 +100,58 @@
     </nav>
 
     <main class="legal-content">
-        <div class="text-wrapper">
-            <span class="compliance-badge">Compliment de la Llei d'IA de la UE</span>
-            <h1>Divulgació d'IA</h1>
-            <span class="update-date">Darrera actualització: gener de 2026</span>
+        <span class="compliance-badge">Compliment de la Llei d'IA de la UE</span>
+        <h1>Divulgació d'IA</h1>
+        <p class="update-date">Darrera actualització: gener de 2026</p>
 
-            <p>Transparència sobre com s'utilitza la intel·ligència artificial per crear contingut a <strong>Manresa.is</strong>, d'acord amb les obligacions de transparència de l'article 50 de la Llei d'IA de la UE.</p>
+        <p>Transparència sobre com s'utilitza la intel·ligència artificial per crear contingut a <strong>Manresa.is</strong>, d'acord amb les obligacions de transparència de l'article 50 de la Llei d'IA de la UE.</p>
 
-            <div class="intro-quote">
-                «Aquest projecte utilitza la intel·ligència artificial com a eina, no com a substitut del judici, els valors o la responsabilitat.»
-            </div>
+        <div class="intro-quote">
+            «Aquest projecte utilitza la intel·ligència artificial com a eina, no com a substitut del judici, els valors o la responsabilitat.»
+        </div>
 
-            <section class="resum-box">
-                <h3>Resum</h3>
-                <ul>
-                    <li>Els articles d'aquest lloc web són <strong>generats automàticament per IA</strong></li>
-                    <li>El contingut es publica <strong>sense revisió humana prèvia</strong></li>
-                    <li>El sistema funciona <strong>de forma autònoma</strong> dins de barreres de protecció predefinides</li>
-                    <li>La supervisió humana és <strong>reactiva</strong> (correccions post-notificació)</li>
-                </ul>
-            </section>
+        <section class="resum-box">
+            <h3>Resum</h3>
+            <ul>
+                <li>Els articles d'aquest lloc web són <strong>generats automàticament per IA</strong></li>
+                <li>El contingut es publica <strong>sense revisió humana prèvia</strong></li>
+                <li>El sistema funciona <strong>de forma autònoma</strong> dins de barreres de protecció predefinides</li>
+                <li>La supervisió humana és <strong>reactiva</strong> (correccions post-notificació)</li>
+            </ul>
+        </section>
 
-            <h2>1. Quins sistemes d'IA fem servir</h2>
-            <p>Manresa.is utilitza sistemes d'intel·ligència artificial per ajudar en la creació de contingut. En concret:</p>
-            <h3>Grans Models de Llenguatge (LLM)</h3>
-            <p>Fem servir els models <strong>Gemini de Google</strong> per generar, investigar i estructurar el contingut dels articles automàticament.</p>
-            <h3>Selecció d'imatges</h3>
-            <p>La IA ajuda a seleccionar imatges adequades de serveis de fotos de stock amb llicència en funció del contingut de l'article.</p>
-            <h3>Programació de continguts</h3>
-            <p>Els sistemes automatitzats gestionen els calendaris de publicació i la distribució per categories.</p>
+        <h2>1. Quins sistemes d'IA fem servir</h2>
+        <p>Manresa.is utilitza sistemes d'intel·ligència artificial per ajudar en la creació de contingut. En concret:</p>
+        <h3>Grans Models de Llenguatge (LLM)</h3>
+        <p>Fem servir els models <strong>Gemini de Google</strong> per generar, investigar i estructurar el contingut dels articles automàticament.</p>
+        <h3>Selecció d'imatges</h3>
+        <p>La IA ajuda a seleccionar imatges adequades de serveis de fotos de stock amb llicència en funció del contingut de l'article.</p>
+        <h3>Programació de continguts</h3>
+        <p>Els sistemes automatitzats gestionen els calendaris de publicació i la distribució per categories.</p>
 
-            
+        <h2>2. Com es crea el contingut</h2>
+        <p>Aquest lloc web funciona com un <strong>sistema d'IA completament autònom</strong>. El canal de contingut funciona de la següent manera:</p>
+        
+        
 
-            <h2>2. Com es crea el contingut</h2>
-            <p>Aquest lloc web funciona com un <strong>sistema d'IA completament autònom</strong>. El canal de contingut funciona de la següent manera:</p>
-            <p><strong>Descobriment autònom de temes:</strong> els agents d'IA busquen contínuament temes rellevants sobre Manresa: esdeveniments, obertures i notícies.</p>
-            <p><strong>Recerca automatitzada:</strong> els sistemes recopilen i creuen informació de fonts públiques locals.</p>
-            <p><strong>Generació de contingut:</strong> la IA genera articles complets seguint directrius editorials predefinides.</p>
-            <p><strong>Controls de qualitat:</strong> el sistema realitza comprovacions factuals bàsiques i de format.</p>
-            <p><strong>Publicació automàtica:</strong> el contingut es publica directament sense revisió humana.</p>
-            <p><strong>Nota:</strong> Cap persona revisa ni aprova articles individuals abans de la seva publicació. El sistema funciona les 24 hores del dia, els 7 dies de la setmana.</p>
+        <p><strong>Descobriment autònom de temes:</strong> els agents d'IA busquen contínuament temes rellevants sobre Manresa: esdeveniments, obertures i notícies.</p>
+        <p><strong>Recerca automatitzada:</strong> els sistemes recopilen i creuen informació de fonts públiques locals.</p>
+        <p><strong>Generació de contingut:</strong> la IA genera articles complets seguint directrius editorials predefinides.</p>
+        <p><strong>Controls de qualitat:</strong> el sistema realitza comprovacions factuals bàsiques i de format.</p>
+        <p><strong>Publicació automàtica:</strong> el contingut es publica directament sense revisió humana.</p>
+        <p><strong>Nota:</strong> Cap persona revisa ni aprova articles individuals abans de la seva publicació. El sistema funciona les 24 hores del dia, els 7 dies de la setmana.</p>
 
-            <h2>3. Model de supervisió humana</h2>
-            <p>L'<strong>"exempció editorial"</strong> en virtut de l'article 50 de la Llei d'IA de la UE <strong>no s'aplica</strong>. Tot el contingut es revela clarament com a generat per IA. El propietari realitza la supervisió a través de baranes predefinides i correccions reactives a <strong>legal@manresa.is</strong>.</p>
+        <h2>3. Model de supervisió humana</h2>
+        <p>L'<strong>"exempció editorial"</strong> en virtut de l'article 50 de la Llei d'IA de la UE <strong>no s'aplica</strong>. Tot el contingut es revela clarament com a generat per IA. El propietari realitza la supervisió a través de baranes predefinides i correccions reactives a <strong>legal@manresa.is</strong>.</p>
 
-            <h2>4. Personatges editorials</h2>
-            <p>Els perfils d'autor a Manresa.is són <strong>personatges editorials sintètics</strong>. No són individus reals. Ajuden a mantenir un to i una experiència coherents en les diferents categories.</p>
+        <h2>4. Personatges editorials</h2>
+        <p>Els perfils d'autor a Manresa.is són <strong>personatges editorials sintètics</strong>. No són individus reals. Ajuden a mantenir un to i una experiència coherents en les diferents categories.</p>
 
-            <h2>5. Limitacions i precisió</h2>
-            <p>Tot i que ens esforcem per la precisió, el contingut assistit per IA té limitacions: la informació pot quedar desactualitzada i els matisos locals no sempre es capten perfectament.</p>
+        <h2>5. Limitacions i precisió</h2>
+        <p>Tot i que ens esforcem per la precisió, el contingut assistit per IA té limitacions: la informació pot quedar desactualitzada i els matisos locals no sempre es capten perfectament.</p>
 
-            <h2>6. Divulgació llegible per màquina</h2>
-            <div class="code-block">
+        <h2>6. Divulgació llegible per màquina</h2>
+        <div class="code-block">
 {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -166,27 +166,26 @@
     "description": "Contingut assistit per IA"
   }
 }
-            </div>
-
-            <h2>7. Marc legal</h2>
-            <p>Aquesta divulgació es proporciona de conformitat amb la <strong>Llei d'IA de la UE (Reglament 2024/1689)</strong> i els requisits supervisats per l'<strong>AESIA</strong>.</p>
-
-            <h2>8. Els vostres comentaris</h2>
-            <p>Si observeu inexactituds o teniu dubtes sobre el nostre ús de la IA, contacteu a <strong>legal@manresa.is</strong>.</p>
-
-            <h2>9. Actualitzacions d'aquesta divulgació</h2>
-            <p>A mesura que la tecnologia i les regulacions evolucionin, actualitzarem aquesta pàgina en conseqüència.</p>
-
-            <hr class="hr-divider">
-
-            <section class="related-pages">
-                <h4>Pàgines relacionades</h4>
-                <div class="btn-group">
-                    <a href="legal.html" class="btn-related">Avís legal</a>
-                    <a href="privacitat.html" class="btn-related">Política de privacitat</a>
-                </div>
-            </section>
         </div>
+
+        <h2>7. Marc legal</h2>
+        <p>Aquesta divulgació es proporciona de conformitat amb la <strong>Llei d'IA de la UE (Reglament 2024/1689)</strong> i els requisits supervisats per l'<strong>AESIA</strong>.</p>
+
+        <h2>8. Els vostres comentaris</h2>
+        <p>Si observeu inexactituds o teniu dubtes sobre el nostre ús de la IA, contacteu a <strong>legal@manresa.is</strong>.</p>
+
+        <h2>9. Actualitzacions d'aquesta divulgació</h2>
+        <p>A mesura que la tecnologia i les regulacions evolucionin, actualitzarem aquesta pàgina en conseqüència.</p>
+
+        <hr class="hr-divider">
+
+        <section class="related-pages">
+            <h4>Pàgines relacionades</h4>
+            <div class="btn-group">
+                <a href="legal.html" class="btn-related">Avís legal</a>
+                <a href="privacitat.html" class="btn-related">Política de privacitat</a>
+            </div>
+        </section>
     </main>
 
     <footer>
