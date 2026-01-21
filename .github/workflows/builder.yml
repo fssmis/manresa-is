@@ -1,23 +1,32 @@
-name: Build Manresa.is
+name: Autonomo y Deploy FTP
 on:
   push:
-    branches: [ main ]
     paths:
       - 'database.json'
+      - 'index.html'
       - 'builder.py'
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
+      - name: 🚚 Checkout
+        uses: actions/checkout@v3
+
+      - name: ⚙️ Configurar Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
-      - name: Generate Site
+
+      - name: 🤖 Generar ManresIA
         run: python builder.py
-      - name: Deploy to GitHub Pages
-        uses: stefanzweifel/git-auto-commit-action@v4
+
+      - name: 📤 Pujar al Hosting (FTP)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          commit_message: "Bot: Actualització autònoma de contingut"
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Si el teu hosting necessita una carpeta específica (ex: /public_html o /web)
+          # posa-la aquí sota. Si no, puja a l'arrel.
+          server-dir: ./
