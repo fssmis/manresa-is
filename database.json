@@ -3,26 +3,38 @@
   "manresIA_content": {
     "hemeroteca_parlar": [
       {
-        "word": "punxir",
-        "definition": "Variant local del verb punxar, utilitzada genuïnament a la comarca del Bages.",
-        "example": "Vigila amb l'esbarzer, que et punixiràs!",
+        "word": "Atandador",
+        "definition": "Ofici clàssic de la Séquia. La persona que repartia l'aigua als regants segons els torns establerts.",
+        "example": "Si no obres la comporta quan toca, l'atandador et clavarà una bona multa.",
         "date": "2026-01-21"
       },
       {
-        "word": "torreta",
-        "definition": "Recipient de terrissa o plàstic per a conrear plantes; test.",
-        "example": "He de canviar la torreta del gerani.",
+        "word": "Enraonar",
+        "definition": "Conversar, parlar. A Manresa es manté viu per referir-se a xerrades pausades.",
+        "example": "Ens hem trobat a la Plana de l'Om i hem estat una bona estona enraonant.",
         "date": "2026-01-20"
       },
       {
-        "word": "postada",
-        "definition": "Taula de fusta, prestatge.",
-        "example": "Abaixa la caixa de sobre la postada.",
+        "word": "Punxir",
+        "definition": "Variant local de punxar, molt utilitzada al Bages.",
+        "example": "No t'acostis als esbarzers que et punixiràs!",
         "date": "2026-01-19"
+      },
+      {
+        "word": "Torreta",
+        "definition": "Recipient per a plantes; el que a altres llocs en diuen 'test'.",
+        "example": "He comprat una torreta de terrissa per al gerani del balcó.",
+        "date": "2026-01-18"
+      },
+      {
+        "word": "Postada",
+        "definition": "Prestatge de fusta o estant.",
+        "example": "Deixa els llibres a la postada de dalt.",
+        "date": "2026-01-17"
       }
     ],
-    "agent_tifa_avui": "Punxir... l'únic que punxeu vosaltres són les rodes dels cotxes que aparquen malament al Passeig. Aneu a pastar fang!",
-    "smart_city_news": "L'Ajuntament de Manresa utilitza sensors d'IA per gestionar els fluxos de turistes a la Seu.",
-    "history_snippet": "Segons El Pou de la Gallina, el barri vell és el testimoni de la resiliència de la ciutat."
+    "agent_tifa_avui": "Atandador... l'únic que s'atanda aquí són els coloms a la Plaça Major fent punteria sobre els capós nets dels cotxes. I parlant de cotxes, el que s'ha quedat en doble fila al carrer Guimerà ja pot anar traient la cartera. Aneu a pastar fang!",
+    "smart_city_news": "L'Ajuntament de Manresa confirma que els sensors del carrer del Balç han detectat un augment del 15% en les visites nocturnes. S'estudia millorar la il·luminació intel·ligent.",
+    "history_snippet": "Sabies que la Séquia de Manresa té 26 quilòmetres i només 10 metres de desnivell? Una obra d'enginyeria medieval única a Europa que encara avui ens dóna aigua."
   }
 }
