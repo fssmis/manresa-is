@@ -24,9 +24,10 @@ jobs:
       - name: 📤 Pujar al Hosting (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
+          - name: 📤 Pujar al Hosting (FTP)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-         server-dir: public_html/
-          # posa-la aquí sota. Si no, puja a l'arrel.
-          server-dir: ./
+          server-dir: public_html/
