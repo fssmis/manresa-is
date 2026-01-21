@@ -1,12 +1,27 @@
 {
   "last_update": "2026-01-21",
   "manresIA_content": {
-    "word_of_the_day": {
+    "hemeroteca_parlar": [
+      {
         "word": "punxir",
         "definition": "Variant local del verb punxar, utilitzada genuïnament a la comarca del Bages.",
         "example": "Vigila amb l'esbarzer, que et punixiràs!",
-        "agent_tifa": "Punxir... l'únic que punxeu vosaltres són les rodes dels cotxes que aparquen malament al Passeig. Aneu a pastar fang!"
-    },
+        "date": "2026-01-21"
+      },
+      {
+        "word": "torreta",
+        "definition": "Recipient de terrissa o plàstic per a conrear plantes; test.",
+        "example": "He de canviar la torreta del gerani.",
+        "date": "2026-01-20"
+      },
+      {
+        "word": "postada",
+        "definition": "Taula de fusta, prestatge.",
+        "example": "Abaixa la caixa de sobre la postada.",
+        "date": "2026-01-19"
+      }
+    ],
+    "agent_tifa_avui": "Punxir... l'únic que punxeu vosaltres són les rodes dels cotxes que aparquen malament al Passeig. Aneu a pastar fang!",
     "smart_city_news": "L'Ajuntament de Manresa utilitza sensors d'IA per gestionar els fluxos de turistes a la Seu.",
     "history_snippet": "Segons El Pou de la Gallina, el barri vell és el testimoni de la resiliència de la ciutat."
   }
