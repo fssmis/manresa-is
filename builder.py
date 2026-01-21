@@ -61,27 +61,27 @@ def generate_manresia():
     <body>
         <div class="nav-back"><a href="index.html">← Tornar a Manresa.is</a></div>
         <h1>Manres<span class="orange">IA</span></h1>
-        <p><i>L'algoritme que entén el Bages. Sincronitzat amb l'ajuntament.</i></p>
+        <p><i>Trets formals, fonètics, morfològics, sintàctics, lèxics i de fraseologia propis de la ciutat.</i></p>
         
         <div class="ia-card">
-            <span class="orange">DESTACAT D'AVUI:</span>
+            <span class="orange">LA PARAULA D'AVUI:</span>
             <h2 style="font-size: 2.5rem; margin: 10px 0;">{word_today['word']}</h2>
             <p style="font-size: 1.2rem;">{word_today['definition']}</p>
         </div>
 
         <div class="tifa">
-            <strong>🕵️ Agent Tifa diu:</strong><br>
+            <strong>🕵️ El pardal manresà diu:</strong><br>
             "{info['agent_tifa_avui']}"
         </div>
 
         <div class="hemeroteca">
-            <h3>📚 Hemeroteca clicable del parlar</h3>
+            <h3>📚 Hemeroteca del parlar</h3>
             <p style="font-size: 0.9rem; color: #666; margin-bottom: 15px;">Fes clic a cada paraula per veure'n el significat i l'exemple.</p>
             {hemeroteca_html}
         </div>
 
         <footer>
-            Dades: Ajuntament de Manresa | Fonts: El Pou de la Gallina i Jaume Puig Ibáñez.
+            Dades: El parlar de Manresa, de Jaume Puig Ibáñez.
         </footer>
 
         <script>
