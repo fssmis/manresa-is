@@ -3,70 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avís Legal | Manresa.is</title>
+    <title>Divulgació d'IA | Manresa.is</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
     <style>
         * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; background-color: #fff; color: #1a1a1a; line-height: 1.5; }
-
-        /* --- CAPÇALERA --- */
-        .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 1000; }
-        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
-        .nav-logo { font-family: 'Georgia', serif; font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
-        .punto-is { color: #f05a28 !important; }
-        .nav-menu { list-style: none; display: flex; gap: 15px; }
-        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
-        .nav-menu a:hover { color: #f05a28 !important; }
-        .nav-widgets { display: flex; align-items: center; gap: 10px; }
-        .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; display: flex; align-items: center; gap: 5px; border: 1px solid #eee !important; color: #64748b; }
-
-        /* --- CONTINGUT LEGAL --- */
-        .legal-content { max-width: 850px; margin: 60px auto; padding: 0 20px; font-family: -apple-system, sans-serif; color: #444; }
-        h1, h2, h3 { font-family: 'Georgia', serif; font-weight: 400; color: #1a1a1a; }
-        h1 { font-size: 3rem; margin-bottom: 15px; letter-spacing: -1px; }
-        h2 { font-size: 1.6rem; margin-top: 50px; margin-bottom: 20px; border-bottom: 1px solid #f0f0f0 !important; padding-bottom: 10px; }
-        h3 { font-size: 1.2rem; margin: 25px 0 10px; font-weight: 600; }
-        p { margin-bottom: 20px; line-height: 1.7; }
-        ul { margin-bottom: 20px; padding-left: 20px; }
-        li { margin-bottom: 10px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #fff; color: #1a1a1a; line-height: 1.6; }
+        h1, h2, h3, .nav-logo { font-family: 'Georgia', serif !important; }
         
-        .box { border-radius: 12px; padding: 25px; margin: 30px 0; border: 1px solid transparent !important; }
-        .box-green { background-color: #f0fdf4; color: #166534; border-color: #dcfce7 !important; }
-        .box-yellow { background: #fffcfb; color: #92400e; border: 1px solid #fde6de !important; }
-        .box-quote { border-left: 4px solid #f05a28 !important; background: #fffcfb; color: #4a4a4a; font-style: italic; font-size: 1.1rem; padding: 25px; margin: 40px 0; }
+        .top-nav { width: 100%; height: 64px; background: #fff; border-bottom: 1px solid #eee !important; position: sticky; top: 0; z-index: 1000; display: flex; align-items: center; }
+        .nav-container { width: 100%; max-width: 1400px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
+        .punto-is { color: #f05a28 !important; }
+        .nav-widgets { display: flex; align-items: center; gap: 10px; }
+        .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-size: 0.8rem; color: #64748b; border: 1px solid #eee !important; font-family: sans-serif; font-weight: 600; }
 
-        .info-table { width: 100%; border-collapse: collapse; margin: 25px 0; border: 1px solid #eee !important; border-radius: 8px; overflow: hidden; }
-        .info-table td { padding: 15px; border-bottom: 1px solid #eee !important; }
-        .label { color: #888; width: 30%; font-size: 0.8rem; text-transform: uppercase; font-weight: 700; }
-        .value { color: #1a1a1a; font-weight: 500; }
+        .legal-content { max-width: 800px; margin: 60px auto; padding: 0 20px; }
+        .compliance-label { color: #f05a28; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: block; }
+        h1 { font-size: 3rem; margin-bottom: 10px; letter-spacing: -1.5px; font-weight: 400; }
+        .update-date { color: #64748b; font-size: 0.9rem; margin-bottom: 30px; display: block; }
+        
+        .intro-quote { border-left: 4px solid #f05a28 !important; padding: 20px 30px; font-style: italic; font-size: 1.3rem; color: #444; background: #fffcfb; margin: 40px 0; line-height: 1.5; }
+        
+        h2 { font-size: 1.8rem; margin: 50px 0 20px; font-weight: 400; border-bottom: 1px solid #eee !important; padding-bottom: 10px; }
+        h3 { font-size: 1.2rem; margin: 30px 0 15px; font-weight: 700; }
+        p { margin-bottom: 20px; font-size: 1.1rem; color: #333; }
+        
+        .resum-list { background: #f8fafc; padding: 30px; border-radius: 12px; margin: 30px 0; list-style: none; }
+        .resum-list li { margin-bottom: 15px; padding-left: 25px; position: relative; font-weight: 500; }
+        .resum-list li::before { content: "●"; color: #f05a28; position: absolute; left: 0; }
 
-        /* --- FOOTER --- */
-        .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 100px; text-align: left; }
-        .footer-container { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; align-items: start; }
-        .footer-logo { font-family: 'Georgia', serif; font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
-        .footer-tagline { font-family: sans-serif; color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
-        .footer-col h3 { font-family: sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 12px; }
-        .footer-col ul li a { text-decoration: none; color: #64748b; font-family: sans-serif; font-size: 0.95rem; }
-        .ai-badge { display: inline-block; margin-top: 20px; padding: 4px 10px; background: #f8fafc; border: 1px solid #e2e8f0 !important; border-radius: 4px; font-size: 0.7rem; color: #94a3b8; font-weight: bold; text-transform: uppercase; font-family: sans-serif; }
+        .pipeline-step { margin-bottom: 25px; }
+        .pipeline-step strong { color: #1a1a1a; display: block; margin-bottom: 5px; }
 
-        @media (max-width: 1150px) { .nav-menu { display: none; } }
-        @media (max-width: 768px) { .footer-container { grid-template-columns: 1fr; } }
+        .code-block { background: #1a1a1a; color: #d4d4d4; padding: 20px; border-radius: 8px; font-family: monospace; font-size: 0.9rem; overflow-x: auto; margin: 20px 0; }
+
+        footer { background: #fff; padding: 60px 20px; border-top: 1px solid #eee !important; margin-top: 80px; }
+        .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+        .footer-logo { font-size: 1.5rem; font-weight: bold; margin-bottom: 15px; display: block; text-decoration: none; color: #1a1a1a; }
     </style>
 </head>
 <body>
+
     <nav class="top-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Manresa<span class="punto-is">.is</span></a>
-            <ul class="nav-menu">
-                <li><a href="gastronomia.html">Teca i Beguda</a></li>
-                <li><a href="mediterrania.html">Esdeveniments</a></li>
-                <li><a href="barris.html">Barris</a></li>
-                <li><a href="tecnologia.html">Tech & Work</a></li>
-                <li><a href="llum.html">Guies</a></li>
-                <li><a href="noticies.html">News</a></li>
-            </ul>
             <div class="nav-widgets">
                 <div class="widget">☀️ 6°C</div>
                 <div class="widget" id="real-clock">🕒 --:--</div>
@@ -75,93 +55,109 @@
     </nav>
 
     <main class="legal-content">
-        <h1>Avís Legal</h1>
-        <p style="color: #888; font-style: italic;">Darrera actualització: Gener 2026</p>
+        <span class="compliance-label">Compliment de la Llei d'IA de la UE</span>
+        <h1>Divulgació d'IA</h1>
+        <p>Transparència sobre com s'utilitza la intel·ligència artificial per crear contingut a <strong>Manresa.is</strong>, d'acord amb les obligacions de transparència de l'article 50 de la Llei d'IA de la UE.</p>
+        <span class="update-date">Darrera actualització: gener de 2026</span>
 
-        <div class="box box-quote">
-            "Aquest projecte utilitza la intel·ligència artificial com una eina, no com un substitut del judici, els valors o la responsabilitat humana."
+        <div class="intro-quote">
+            «Aquest projecte utilitza la intel·ligència artificial com a eina, no com a substitut del judici, els valors o la responsabilitat.»
         </div>
 
-        <h2>1. Informació del titular del web</h2>
-        <table class="info-table">
-            <tr><td class="label">Titular</td><td class="value">Manresa.is Project</td></tr>
-            <tr><td class="label">Ubicació</td><td class="value">Manresa, Catalunya</td></tr>
-            <tr><td class="label">Email</td><td class="value">legal@manresa.is</td></tr>
-        </table>
-
-        <div class="box box-green">
-            <strong>Projecte Personal - Sense Activitat Comercial</strong><br>
-            Aquesta web és un projecte personal sense cap propòsit comercial, basat en l'honestedat i el rigor local.
-        </div>
-
-        <h2 id="ia">2. Divulgació d'Intel·ligència Artificial</h2>
-        <div class="box box-yellow">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
-                <strong>Sistema d'IA Autònom - EU AI Act Compliance</strong>
-                <span style="font-size: 0.65rem; padding: 2px 6px; border: 1px solid #f05a28 !important; color: #f05a28; border-radius: 4px; font-weight: bold;">Article 50 Compliant</span>
-            </div>
-            <p>Manresa.is opera com un sistema d'IA autònom que genera i publica contingut de forma automatitzada, complint amb les obligacions de transparència del <strong>Reglament d'IA de la UE (2024/1689)</strong>.</p>
-        </div>
-
-        <h3>Com es crea el contingut</h3>
-        <ul>
-            <li><strong>Topic Discovery:</strong> El sistema detecta automàticament tendències, obertures i esdeveniments rellevants per a la ciutat.</li>
-            <li><strong>Automated Research:</strong> S'utilitzen fonts oficials de l'Ajuntament de Manresa i arxius històrics com el Pou de la Gallina.</li>
-            <li><strong>Content Generation:</strong> L'IA redacta els textos seguint una guia d'estil "honesta" i local.</li>
-            <li><strong>Quality Check:</strong> El contingut es publica sense revisió humana prèvia, amb supervisió reactiva.</li>
+        <ul class="resum-list">
+            <li>Els articles d'aquest lloc web són <strong>generats automàticament per IA</strong>.</li>
+            <li>El contingut es publica <strong>sense revisió humana prèvia</strong>.</li>
+            <li>El sistema funciona <strong>de forma autònoma</strong> dins de barreres de protecció predefinides.</li>
+            <li>La supervisió humana és <strong>reactiva</strong> (correccions post-notificació).</li>
         </ul>
 
-        <h3>Personas Editorials Sintètiques</h3>
-        <p>Els perfils d'autor d'aquest web (com l'Agent Tifa) són <strong>personas editorials sintètiques</strong>. Són tons de veu creats artificialment per organitzar la informació, no són persones reals, tot i que la responsabilitat legal recau en el titular del domini.</p>
+        <h2>1. Quins sistemes d'IA fem servir</h2>
+        <p>Manresa.is utilitza sistemes d'intel·ligència artificial per ajudar en la creació de contingut. En concret:</p>
+        <h3>Grans Models de Llenguatge (LLM)</h3>
+        <p>Fem servir els models <strong>Gemini de Google</strong> per generar, investigar i estructurar el contingut dels articles automàticament.</p>
+        <h3>Selecció d'imatges</h3>
+        <p>La IA ajuda a seleccionar imatges adequades de serveis de fotos de stock o genera il·lustracions sintètiques per acompanyar la informació.</p>
+        <h3>Programació de continguts</h3>
+        <p>Sistemes automatitzats gestionen el flux de publicació 24/7 per mantenir la guia actualitzada.</p>
 
-        <h2>3. Exactitud i Responsabilitat</h2>
-        <p>Atès que el contingut és generat per algoritmes, Manresa.is no pot garantir la infal·libilitat de les dades. Si detecteu algun error, us preguem que ens ho comuniqueu a <strong>legal@manresa.is</strong> per a la seva correcció immediata.</p>
+        <h2>2. Com es crea el contingut</h2>
+        <p>Aquest lloc web funciona com un <strong>sistema d'IA completament autònom</strong>. El canal de contingut opera així:</p>
+        
+        <div class="pipeline-step">
+            <strong>Descobriment autònom de temes:</strong> Els agents d'IA busquen contínuament temes rellevants sobre Manresa: esdeveniments al Kursaal, obertures de restaurants al nucli antic, notícies locals i punts d'interès.
+        </div>
+        <div class="pipeline-step">
+            <strong>Recerca automatitzada:</strong> El sistema recopila i creua informació de fonts públiques, dades obertes de l'Ajuntament i arxius històrics digitals.
+        </div>
+        <div class="pipeline-step">
+            <strong>Generació de contingut:</strong> L'IA redacta l'article complet seguint unes directrius editorials que prioritzen l'honestedat i el to manresà.
+        </div>
+        <div class="pipeline-step">
+            <strong>Controls de qualitat:</strong> Realitzem comprovacions algorítmiques de duplicació i coherència factual bàsica.
+        </div>
+        <div class="pipeline-step">
+            <strong>Publicació automàtica:</strong> El contingut es puja al web sense intervenció humana, incloent-hi l'etiqueta de "Generat per IA".
+        </div>
 
-        <h2>4. Propietat Intel·lectual i Marc Legal</h2>
-        <p>El disseny i el codi són propietat del projecte. Aquest lloc web segueix les directrius de l'Agència Espanyola de Supervisió de la IA (AESIA).</p>
+        <h2>3. Model de supervisió humana</h2>
+        <p>Aquest lloc web funciona de manera autònoma sense revisió humana prèvia. L'exempció editorial de l'AI Act no s'aplica aquí: tot el contingut es revela clarament com a artificial.</p>
+        <p>La supervisió es realitza mitjançant:</p>
+        <ul>
+            <li><strong>Baranes predefinides:</strong> Regles ètiques i de qualitat que la IA no pot saltar-se.</li>
+            <li><strong>Correccions reactives:</strong> Resposta ràpida a qualsevol error reportat a <strong>legal@manresa.is</strong>.</li>
+        </ul>
+
+        <h2>4. Personatges editorials (Perfils sintètics)</h2>
+        <p>Els perfils d'autor a Manresa.is (com l'<strong>Agent Tifa</strong>) són <strong>personatges editorials sintètics</strong>. No són persones reals, sinó identitats creades per donar un to coherent a cada secció.</p>
+        <p>Tots els perfils estan etiquetats com a "Persona Editorial d'IA". La responsabilitat final recau en el titular del domini.</p>
+
+        <h2>5. Limitacions i precisió</h2>
+        <p>L'IA té límits: la informació pot desactualitzar-se (horaris de comerços), pot haver-hi imprecisions en dades molt específiques o matisos locals que la màquina no capti al 100%. Recomanem verificar dades crítiques directament amb l'establiment.</p>
+
+        <h2>6. Divulgació llegible per màquina</h2>
+        <p>Seguint la Llei d'IA, cada article inclou metadades JSON-LD per a motors de cerca:</p>
+        <div class="code-block">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "sdPublisher": {
+    "@type": "Organization",
+    "name": "Manresa.is"
+  },
+  "about": {
+    "@type": "Thing",
+    "description": "Contingut assistit per IA"
+  }
+}
+        </div>
+
+        <h2>7. Marc legal</h2>
+        <p>Aquesta divulgació compleix amb:</p>
+        <ul>
+            <li><strong>Llei d'IA de la UE (Reglament 2024/1689):</strong> Article 50 sobre transparència.</li>
+            <li><strong>AESIA:</strong> Seguint les directrius de l'Agència Espanyola de Supervisió de la IA.</li>
+        </ul>
+
+        <h2>8. Els vostres comentaris</h2>
+        <p>Si detecteu qualsevol dada errònia o teniu dubtes sobre el nostre ús de la tecnologia, contacteu-nos a <strong>legal@manresa.is</strong>.</p>
+
+        <h2>9. Actualitzacions</h2>
+        <p>Aquest document s'actualitzarà a mesura que la tecnologia o la regulació evolucioni.</p>
     </main>
 
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-col">
+    <footer>
+        <div class="footer-grid">
+            <div>
                 <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
-                <p class="footer-tagline">Curat amb IA. Guiat per valors locals. No acceptem pagaments per aparèixer.</p>
+                <p>La guia de la ciutat, impulsada per intel·ligència artificial.</p>
             </div>
-            <div class="footer-col">
-                <h3>Explora</h3>
-                <ul>
-                    <li><a href="gastronomia.html">Teca i Beguda</a></li>
-                    <li><a href="mediterrania.html">Esdeveniments</a></li>
-                    <li><a href="barris.html">Barris</a></li>
-                    <li><a href="tecnologia.html">Tech & Work</a></li>
-                    <li><a href="llum.html">Guies</a></li>
-                    <li><a href="noticies.html">News</a></li>
-                    <li><a href="manresia.html">ManresIA</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Legal</h3>
-                <ul>
-                    <li><a href="legal.html">Avís legal (Avís Legal)</a></li>
-                    <li><a href="privacitat.html">Política de privacitat</a></li>
-                    <li><a href="legal.html#ia">Divulgació d'IA</a></li>
-                </ul>
-                <div class="ai-badge">AI System Autonomous</div>
+            <div>
+                <h3 style="font-size: 0.8rem; text-transform: uppercase;">Legal</h3>
+                <p style="font-size: 0.9rem;"><a href="legal.html" style="color: #64748b; text-decoration: none;">Avís Legal</a></p>
+                <p style="font-size: 0.9rem;"><a href="privacitat.html" style="color: #64748b; text-decoration: none;">Privacitat</a></p>
             </div>
         </div>
     </footer>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "sdPublisher": {
-        "@type": "Organization",
-        "name": "Manresa.is"
-      },
-      "description": "AI-assisted local information system"
-    }
-    </script>
 
     <script>
         function updateClock() {
@@ -169,7 +165,8 @@
             const t = now.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit' });
             document.getElementById('real-clock').innerHTML = `🕒 ${t}`;
         }
-        setInterval(updateClock, 1000); updateClock();
+        setInterval(updateClock, 1000);
+        updateClock();
     </script>
 </body>
 </html>
