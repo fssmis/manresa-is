@@ -11,9 +11,8 @@ def generate_manresia():
     # Generem l'HTML de l'hemeroteca amb sistema de clic
     hemeroteca_html = ""
     for i, p in enumerate(paraules):
-        # Fem que totes siguin clicables, fins i tot la d'avui a la llista
         hemeroteca_html += f"""
-        <div class="hemeroteca-item">
+        <div class="hemeroteca-item" id="paraula-{i}">
             <button class="accordion" onclick="toggleAccordion(this)">
                 <strong>{p['word']}</strong> <span class="date">({p['date']})</span>
                 <span class="icon">+</span>
@@ -30,15 +29,29 @@ def generate_manresia():
     <html lang="ca">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ManresIA | Manresa.is</title>
         <style>
             body {{ font-family: -apple-system, sans-serif; padding: 40px; max-width: 800px; margin: auto; line-height: 1.6; color: #1a1a1a; }}
             .nav-back {{ margin-bottom: 20px; }}
             .nav-back a {{ text-decoration: none; color: #f05a28; font-weight: bold; }}
-            h1 {{ font-family: Georgia, serif; font-size: 3.5rem; margin-bottom: 10px; }}
+            h1 {{ font-family: Georgia, serif; font-size: clamp(2.5rem, 8vw, 3.5rem); margin-bottom: 10px; }}
             .orange {{ color: #f05a28; }}
             
             .ia-card {{ border: 2px solid #f05a28; padding: 30px; border-radius: 12px; margin-bottom: 30px; background: #fffcfb; }}
+            
+            /* Ruleta Box */
+            .ruleta-box {{ 
+                background: #fdf2f0; border: 1px dashed #f05a28; padding: 20px; 
+                border-radius: 12px; text-align: center; margin-bottom: 30px; 
+            }}
+            .btn-ruleta {{ 
+                background: #f05a28; color: white; border: none; padding: 12px 25px; 
+                border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 1rem;
+                transition: transform 0.2s;
+            }}
+            .btn-ruleta:hover {{ transform: scale(1.05); background: #d4491d; }}
+
             .tifa {{ background: #1a1a1a; color: white; padding: 25px; border-radius: 8px; font-style: italic; margin: 30px 0; border-left: 5px solid #f05a28; }}
             
             /* Estils Acordió */
@@ -69,6 +82,11 @@ def generate_manresia():
             <p style="font-size: 1.2rem;">{word_today['definition']}</p>
         </div>
 
+        <div class="ruleta-box">
+            <p style="margin-bottom: 15px; font-weight: bold;">Tira la ruleta del parlar!</p>
+            <button class="btn-ruleta" onclick="ruletaManresana()">🎲 Paraula a l'atzar</button>
+        </div>
+
         <div class="tifa">
             <strong>🕵️ El pardal manresà diu:</strong><br>
             "{info['agent_tifa_avui']}"
@@ -96,6 +114,26 @@ def generate_manresia():
                     panel.style.maxHeight = panel.scrollHeight + "px";
                     icon.innerHTML = "-";
                 }}
+            }}
+
+            function ruletaManresana() {{
+                const items = document.querySelectorAll('.hemeroteca-item');
+                const randomIndex = Math.floor(Math.random() * items.length);
+                const selectedItem = items[randomIndex];
+                const btn = selectedItem.querySelector('.accordion');
+
+                // Tanquem tots els altres primers per no fer un embolic
+                document.querySelectorAll('.panel').forEach(p => p.style.maxHeight = null);
+                document.querySelectorAll('.accordion').forEach(a => a.classList.remove('active'));
+                document.querySelectorAll('.icon').forEach(i => i.innerHTML = "+");
+
+                // Scroll fins a la paraula triada
+                selectedItem.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+
+                // Obrim la paraula amb un petit retard perquè es vegi l'scroll
+                setTimeout(() => {{
+                    toggleAccordion(btn);
+                }}, 600);
             }}
         </script>
     </body>
