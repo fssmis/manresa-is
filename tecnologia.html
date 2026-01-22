@@ -6,7 +6,7 @@
     <title>Patrimoni | Manresa.is</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
     <style>
-        /* ESTIL IDÈNTIC A MEDITERRANIA.HTML */
+        /* ESTIL EXACTE MEDITERRANIA.HTML */
         * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
@@ -31,7 +31,7 @@
             padding: 0 20px; 
         }
 
-        /* NAVEGACIÓ */
+        /* NAVEGACIÓ ALINEADA */
         .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 10000; }
         .nav-inner { display: flex; justify-content: space-between; align-items: center; }
         .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; }
@@ -40,12 +40,12 @@
         .nav-menu a:hover { color: #f05a28 !important; }
         .widget { background: #f9f9f9; padding: 6px 14px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; font-weight: 600; }
 
-        /* HEADER */
+        /* CAPÇALERA DE PÀGINA */
         .page-header { margin: 60px 0 40px; }
         h1 { font-size: clamp(2.5rem, 8vw, 3.8rem); letter-spacing: -2.5px; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
         .page-description { font-size: 1.25rem; color: #64748b; max-width: 800px; margin-bottom: 40px; }
 
-        /* GRID AMB FOTOS (ESTIL MEDITERRÀNIA) */
+        /* GRID D'ENTRADES CLÒNIC */
         .grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
@@ -61,7 +61,7 @@
             transition: opacity 0.2s;
         }
         
-        .card:hover { opacity: 0.9; }
+        .card:hover { opacity: 0.85; }
 
         .card-image {
             width: 100%;
@@ -69,7 +69,7 @@
             object-fit: cover;
             border-radius: 8px;
             margin-bottom: 20px;
-            background-color: #f1f5f9;
+            background-color: #f8fafc;
         }
 
         .card-tag { 
@@ -82,10 +82,10 @@
             margin-bottom: 12px; 
         }
 
-        .card-title { font-size: 1.5rem; line-height: 1.2; margin-bottom: 15px; font-weight: 400; }
+        .card-title { font-size: 1.5rem; line-height: 1.2; margin-bottom: 15px; font-weight: 400; letter-spacing: -0.5px; }
         .card-excerpt { font-size: 1.05rem; color: #4b5563; line-height: 1.6; }
 
-        /* FOOTER */
+        /* PEU DE PÀGINA 3 COLUMNES */
         footer { background: #fff; padding: 100px 0; border-top: 1px solid #eee !important; margin-top: 100px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 60px; }
         .footer-logo { font-size: 1.8rem; font-weight: bold; text-decoration: none; display: block; margin-bottom: 15px; }
@@ -126,50 +126,50 @@
     <main class="container">
         <header class="page-header">
             <h1>Patrimoni Ciutadà</h1>
-            <p class="page-description">Articles i cròniques sobre la riquesa històrica de Manresa, extrets de l'arxiu de 'El Pou de la Gallina'.</p>
+            <p class="page-description">Dels gegants de la indústria tèxtil a les pedres que narren segles d'història. Contingut seleccionat de l'arxiu de 'El Pou de la Gallina'.</p>
         </header>
 
         <section class="grid">
-            <a href="#" class="card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/17992094707770560475_0" alt="Fàbrica Nova" class="card-image">
+            <a href="https://www.elpou.cat/noticia/6580/la-fabrica-nova-el-gegant-que-espera" class="card">
+                <img src="https://images.unsplash.com/photo-1579294800821-694d95e86143?auto=format&fit=crop&q=80&w=800" alt="Fàbrica Nova" class="card-image">
                 <span class="card-tag">Arquitectura Industrial</span>
-                <h3 class="card-title">La Fàbrica Nova: El gegant de Bertrand i Serra</h3>
-                <p class="card-excerpt">Explorem la història del complex fabril més gran de la ciutat i el seu impacte social al llarg del segle XX.</p>
+                <h3 class="card-title">La Fàbrica Nova: El gegant que es desperta</h3>
+                <p class="card-excerpt">Explorem el passat de Bertrand i Serra i els nous plans per convertir aquest espai en el centre neuràlgic del coneixement i la tecnologia de Manresa.</p>
             </a>
 
-            <a href="#" class="card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/17992094707770560475_1" alt="Carrer del Balç" class="card-image">
-                <span class="card-tag">Edat Mitjana</span>
-                <h3 class="card-title">Carrer del Balç: Un túnel al segle XIV</h3>
-                <p class="card-excerpt">Un dels carrers medievals més ben conservats de Catalunya, amagat sota l'actual nucli antic de Manresa.</p>
+            <a href="https://www.elpou.cat/noticia/5210/carrer-del-balc-viatge-medieval" class="card">
+                <img src="https://images.unsplash.com/photo-1543968996-ee822b8176ba?auto=format&fit=crop&q=80&w=800" alt="Carrer del Balç" class="card-image">
+                <span class="card-tag">Història Medieval</span>
+                <h3 class="card-title">Carrer del Balç: On el temps es va aturar al segle XIV</h3>
+                <p class="card-excerpt">Passegem per una de les joies del gòtic civil més importants de Catalunya, un carrer cobert que conserva l'essència de la ciutat medieval.</p>
             </a>
 
-            <a href="#" class="card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/17992094707770560475_2" alt="Cova de Sant Ignasi" class="card-image">
-                <span class="card-tag">Barroc</span>
-                <h3 class="card-title">La Cova de Sant Ignasi: 500 anys de llegat</h3>
-                <p class="card-excerpt">L'evolució de la balma on Sant Ignasi de Loiola va escriure els Exercicis Espirituals cap a l'actual conjunt monumental.</p>
+            <a href="https://www.elpou.cat/noticia/4890/la-seu-el-cor-de-pedra" class="card">
+                <img src="https://images.unsplash.com/photo-1516496636080-14fb876e029d?auto=format&fit=crop&q=80&w=800" alt="La Seu de Manresa" class="card-image">
+                <span class="card-tag">Patrimoni Religiós</span>
+                <h3 class="card-title">La Seu de Manresa: La llum de Berenguer de Montagut</h3>
+                <p class="card-excerpt">La basílica de Santa Maria de l'Alba no és només un temple; és l'obra mestra que defineix l'horitzó de la capital del Bages des de fa set segles.</p>
             </a>
 
-            <a href="#" class="card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/17992094707770560475_3" alt="Tines de pedra seca" class="card-image">
-                <span class="card-tag">Pla de Bages</span>
-                <h3 class="card-title">Tines de pedra seca: Vi entre boscos</h3>
-                <p class="card-excerpt">Construccions úniques al món que testimonien l'esclat de la vinya a la comarca del Bages durant el segle XIX.</p>
+            <a href="https://www.elpou.cat/noticia/5920/tines-pedra-seca" class="card">
+                <img src="https://images.unsplash.com/photo-1505575967455-40e256f73376?auto=format&fit=crop&q=80&w=800" alt="Tines Bages" class="card-image">
+                <span class="card-tag">Paisatge Cultural</span>
+                <h3 class="card-title">Les tines del Bages: L'enginy de la pedra seca</h3>
+                <p class="card-excerpt">Descobrim les construccions vitivinícoles úniques a Europa, testimonis de l'esclat de la vinya al cor de les valls del Montcau.</p>
             </a>
 
-            <a href="#" class="card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/17992094707770560475_4" alt="Modernisme" class="card-image">
+            <a href="https://www.elpou.cat/noticia/6310/modernisme-manresa" class="card">
+                <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&q=80&w=800" alt="Casino de Manresa" class="card-image">
                 <span class="card-tag">Modernisme</span>
-                <h3 class="card-title">El Casino i el llegat d'Ignasi Oms</h3>
-                <p class="card-excerpt">L'edifici més emblemàtic del Passeig Pere III, símbol del progrés i de la burgesia manresana de principis de segle.</p>
+                <h3 class="card-title">El Casino i la burgesia: El llegat d'Ignasi Oms</h3>
+                <p class="card-excerpt">Un recorregut per la Manresa de principis de segle a través dels seus edificis modernistes més emblemàtics al Passeig Pere III.</p>
             </a>
 
-            <a href="#" class="card">
-                <img src="http://googleusercontent.com/image_collection/image_retrieval/17992094707770560475_5" alt="Pont Vell" class="card-image">
-                <span class="card-tag">Ponts</span>
-                <h3 class="card-title">El Pont Vell: La porta d'entrada històrica</h3>
-                <p class="card-excerpt">Reconstruït després de la guerra, el pont medieval segueix sent el millor mirador de la Seu i la Cova sobre el Cardener.</p>
+            <a href="https://www.elpou.cat/noticia/4750/pont-vell" class="card">
+                <img src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=800" alt="Pont Vell" class="card-image">
+                <span class="card-tag">Infraestructura Històrica</span>
+                <h3 class="card-title">El Pont Vell: La porta mil·lenària de la ciutat</h3>
+                <p class="card-excerpt">Analitzem la història del pont que ha vist passar pelegrins i exèrcits, servint de mirador privilegiat sobre el Cardener.</p>
             </a>
         </section>
     </main>
