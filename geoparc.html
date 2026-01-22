@@ -36,19 +36,16 @@
         .card img { width: 100%; height: 100%; object-fit: cover; }
         .card-content { padding: 15px; }
         .meta { font-family: sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
-        .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; height: 2.4em; overflow: hidden; }
-        .card p { font-size: 0.85rem; color: #555; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; height: 2.8em; overflow: hidden; }
 
         .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 60px; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
         .footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
         .footer-tagline { font-family: sans-serif; color: #64748b; font-size: 0.95rem; line-height: 1.6; }
         .footer-col h3 { font-family: sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; text-transform: uppercase; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li a { text-decoration: none; color: #64748b; font-family: sans-serif; font-size: 0.95rem; }
 
         @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } .nav-menu { display: none; } }
+        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -62,6 +59,7 @@
                 <li><a href="patrimoni.html">Patrimoni</a></li>
                 <li><a href="geoparc.html" style="color: #f05a28;">Geoparc</a></li>
                 <li><a href="noticies.html">News</a></li>
+                <li><a href="manresia.html">ManresIA</a></li>
             </ul>
             <div class="nav-widgets">
                 <div class="widget" id="real-clock">🕒 --:--</div>
@@ -71,164 +69,114 @@
 
     <header class="hero">
         <h1>Indrets del Geoparc</h1>
-        <p>Explorant el llegat geològic i natural de Manresa i el Bages mitjançant l'arxiu de 'El Pou de la Gallina'.</p>
+        <p>L'inventari natural i paisatgístic del Bages, recuperat de l'arxiu de 'El Pou de la Gallina'.</p>
     </header>
 
     <main class="grid-cards">
         <a href="https://www.elpou.cat/noticia/5888/el-guix" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5888_el_guix_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Geologia</span>
-                <h3>El Guix</h3>
-                <p>El barri del Guix deu el seu nom a la natura geològica del terreny, ric en sulfat de calç.</p>
-            </div>
+            <div class="card-content"><span class="meta">Geologia</span><h3>El Guix</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/5713/el-serrat-del-pujolet" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5713_serrat_pujolet_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Balcó Natural</span>
-                <h3>El Serrat del Pujolet</h3>
-                <p>Un dels millors miradors sobre la ciutat i la conca del Cardener.</p>
-            </div>
+            <div class="card-content"><span class="meta">Balcó Natural</span><h3>El Serrat del Pujolet</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/5499/la-riera-de-rajadell" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5499_riera_rajadell_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Ecosistema</span>
-                <h3>La Riera de Rajadell</h3>
-                <p>L'espai fluvial més ben conservat del terme municipal de Manresa.</p>
-            </div>
+            <div class="card-content"><span class="meta">Entorn Fluvial</span><h3>La Riera de Rajadell</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/5330/el-parc-de-l-agulla" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5330_parc_agulla_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Lleure / Séquia</span>
-                <h3>El Parc de l'Agulla</h3>
-                <p>El gran estany que emmagatzema l'aigua que arriba per la Séquia medieval.</p>
-            </div>
+            <div class="card-content"><span class="meta">Lleure</span><h3>El Parc de l'Agulla</h3></div>
         </a>
-
         <a href="https://www.elpou.cat/noticia/5125/els-turons-de-la-ciutat" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5125_turons_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Orografia</span>
-                <h3>Els turons de la ciutat</h3>
-                <p>Manresa es va fundar sobre turons estratègics com el del Puigcardener.</p>
-            </div>
+            <div class="card-content"><span class="meta">Orografia</span><h3>Els turons de la ciutat</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/4751/el-camu-de-la-riera" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4751_cam_riera_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Senderisme</span>
-                <h3>El camí de la Riera</h3>
-                <p>Recorregut pel marge esquerre del Cardener fins a trobar la riera de Rajadell.</p>
-            </div>
+            <div class="card-content"><span class="meta">Caminada</span><h3>El camí de la Riera</h3></div>
         </a>
+
         <a href="https://www.elpou.cat/noticia/4532/el-paratge-de-les-obagues" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4532_obagues_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Indret Humit</span>
-                <h3>El paratge de les Obagues</h3>
-                <p>Zona d'ombra i aigua amb gran interès per la vegetació de ribera.</p>
-            </div>
+            <div class="card-content"><span class="meta">Paisatge</span><h3>El paratge de les Obagues</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/4207/els-comtals" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4207_comtals_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Paisatge</span>
-                <h3>Els Comtals</h3>
-                <p>Un indret marcat pel pas del tren i la potassa, ple de racons geològics.</p>
-            </div>
+            <div class="card-content"><span class="meta">Història Viva</span><h3>Els Comtals</h3></div>
         </a>
-
         <a href="https://www.elpou.cat/noticia/3890/la-punta-de-sabata" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3890_punta_sabata_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Geologia</span>
-                <h3>La Punta de Sabata</h3>
-                <p>Aflorament rocós característic de l'estratigrafia del Bages.</p>
-            </div>
+            <div class="card-content"><span class="meta">Geologia</span><h3>La Punta de Sabata</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/3534/el-coll-de-la-lluna" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3534_coll_lluna_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Mirador</span>
-                <h3>El Coll de la Lluna</h3>
-                <p>Punt de pas de l'Anella Verda amb vistes privilegiades a Montserrat.</p>
-            </div>
+            <div class="card-content"><span class="meta">Mirador</span><h3>El Coll de la Lluna</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/3296/el-pou-de-la-gallina" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3296_pou_gallina_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Llegenda / Indret</span>
-                <h3>El Pou de la Gallina</h3>
-                <p>L'indret on es barreja la llegenda ignasiana amb el subsol manresà.</p>
-            </div>
+            <div class="card-content"><span class="meta">Indret</span><h3>El Pou de la Gallina</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/2843/el-pou-de-llum" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2843_pou_llum_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Simbolisme</span>
-                <h3>El Pou de Llum</h3>
-                <p>Espai de memòria i espiritualitat situat a l'entorn de la Balconada.</p>
-            </div>
+            <div class="card-content"><span class="meta">Simbologia</span><h3>El Pou de Llum</h3></div>
         </a>
 
         <a href="https://www.elpou.cat/noticia/2418/la-falda-de-la-seu" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2418_falda_seu_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Urbanisme Natural</span>
-                <h3>La falda de la Seu</h3>
-                <p>La roca sobre la qual s'alça la basílica, un dels fonaments del Geoparc.</p>
-            </div>
+            <div class="card-content"><span class="meta">Roca</span><h3>La falda de la Seu</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/2130/la-torre-del-paxot" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2130_torre_paxot_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Horta</span>
-                <h3>La Torre del Paxot</h3>
-                <p>Exemple del patrimoni agrícola i els indrets de regadiu històrics.</p>
-            </div>
+            <div class="card-content"><span class="meta">Horta</span><h3>La Torre del Paxot</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/1520/els-espais-oberts" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/1520_espais_oberts_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Natura</span>
-                <h3>Els espais oberts</h3>
-                <p>Reflexió sobre els indrets no urbanitzats que envolten l'Anella Verda.</p>
-            </div>
+            <div class="card-content"><span class="meta">Natura</span><h3>Els espais oberts</h3></div>
         </a>
         <a href="https://www.elpou.cat/noticia/1099/el-riu-cardener" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/1099_cardener_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Fluvial</span>
-                <h3>El riu Cardener</h3>
-                <p>L'eix vertebrador de la ciutat i principal agent modelador del paisatge.</p>
-            </div>
+            <div class="card-content"><span class="meta">Fluvial</span><h3>El riu Cardener</h3></div>
         </a>
+
+        <a href="https://www.elpou.cat/noticia/658/la-font-de-les-tanyes" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/658_font_tanyes_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Fonts</span><h3>La font de les Tanyes</h3></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/141/el-parc-de-la-seu" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/141_parc_seu_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Parc</span><h3>El parc de la Seu</h3></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/342/la-font-de-la-pola" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/342_font_pola_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Fonts</span><h3>La font de la Pola</h3></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/475/el-gorg-blau" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/475_gorg_blau_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Aigua</span><h3>El Gorg Blau</h3></div>
+        </a>
+
     </main>
 
     <footer class="main-footer">
         <div class="footer-container">
             <div class="footer-col">
                 <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
-                <p class="footer-tagline">Curat amb IA. Guiat per valors locals. No acceptem pagaments per aparèixer.</p>
+                <p class="footer-tagline">Curat amb IA. Guiat per valors locals.</p>
             </div>
             <div class="footer-col">
                 <h3>Explora</h3>
                 <ul>
                     <li><a href="gastronomia.html">Teca i Beguda</a></li>
                     <li><a href="mediterrania.html">Esdeveniments</a></li>
-                    <li><a href="barris.html">Barris</a></li>
                     <li><a href="patrimoni.html">Patrimoni</a></li>
-                    <li><a href="geoparc.html">Geoparc</a></li>
                 </ul>
             </div>
             <div class="footer-col">
                 <h3>Legal</h3>
                 <ul>
                     <li><a href="legal.html">Avís Legal</a></li>
-                    <li><a href="privacitat.html">Privacitat</a></li>
                 </ul>
             </div>
         </div>
