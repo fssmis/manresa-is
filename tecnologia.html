@@ -7,25 +7,21 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
     <style>
         * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Georgia', serif; background-color: #fff; color: #1a1a1a; line-height: 1.5; }
+        body { font-family: 'Georgia', serif; background-color: #fff; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
-        /* --- CAPÇALERA UNIFICADA --- */
         .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 1000; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
-        .nav-logo { font-family: 'Georgia', serif; font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
+        .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
         .punto-is { color: #f05a28 !important; }
         .nav-menu { list-style: none; display: flex; gap: 15px; }
-        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
+        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; }
         .nav-menu a:hover { color: #f05a28 !important; }
-        .nav-widgets { display: flex; align-items: center; gap: 10px; }
-        .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; display: flex; align-items: center; gap: 5px; border: 1px solid #eee !important; color: #64748b; }
+        .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; }
 
-        /* --- HERO --- */
         .hero { text-align: center; padding: 80px 20px 40px; }
         .hero h1 { font-size: 3rem; font-weight: 400; letter-spacing: -1.5px; margin-bottom: 10px; }
         .hero p { color: #666; font-style: italic; font-size: 1.1rem; }
 
-        /* --- GRID 4 COLUMNES --- */
         .grid-cards { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
@@ -36,26 +32,24 @@
         }
         .card { text-decoration: none; color: inherit; display: flex; flex-direction: column; background: #fff; border: 1px solid #eee !important; border-radius: 10px; overflow: hidden; transition: transform 0.2s ease; }
         .card:hover { transform: translateY(-4px); border-color: #ddd !important; }
-        .img-container { width: 100%; height: 160px; overflow: hidden; }
+        .img-container { width: 100%; height: 160px; overflow: hidden; background: #f8fafc; }
         .card img { width: 100%; height: 100%; object-fit: cover; }
         .card-content { padding: 15px; }
-        .meta { font-family: sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
-        .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; height: 2.4em; overflow: hidden; }
-        .card p { font-size: 0.8rem; color: #555; line-height: 1.4; }
-        .author-meta { font-size: 0.7rem; color: #999; margin-top: 10px; display: block; font-family: sans-serif; }
+        .meta { font-family: sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
+        .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; }
+        .card p { font-size: 0.8rem; color: #555; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
-        /* --- FOOTER UNIFICAT --- */
-        .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 60px; text-align: left; }
-        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; align-items: start; }
-        .footer-logo { font-family: 'Georgia', serif; font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
-        .footer-tagline { font-family: sans-serif; color: #64748b; font-size: 0.95rem; line-height: 1.6; margin-bottom: 25px; }
-        .footer-col h3 { font-family: sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px; }
+        .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 60px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
+        .footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
+        .footer-tagline { font-family: sans-serif; color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+        .footer-col h3 { font-family: sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; text-transform: uppercase; }
         .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
         .footer-col ul li a { text-decoration: none; color: #64748b; font-family: sans-serif; font-size: 0.95rem; }
-        .ai-badge { display: inline-block; margin-top: 20px; padding: 4px 10px; background: #f8fafc; border: 1px solid #e2e8f0 !important; border-radius: 4px; font-size: 0.7rem; color: #94a3b8; font-weight: bold; text-transform: uppercase; font-family: sans-serif; }
 
         @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } .nav-menu { display: none; } }
+        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -72,7 +66,6 @@
                 <li><a href="manresia.html">ManresIA</a></li>
             </ul>
             <div class="nav-widgets">
-                <div class="widget">☀️ 6°C</div>
                 <div class="widget" id="real-clock">🕒 --:--</div>
             </div>
         </div>
@@ -80,48 +73,40 @@
 
     <header class="hero">
         <h1>Patrimoni Ciutadà</h1>
-        <p>Les cròniques històriques i arquitectòniques de Lluís Virós a 'El Pou de la Gallina'.</p>
+        <p>Recull complet de les cròniques de Lluís Virós per a 'El Pou de la Gallina'.</p>
     </header>
 
     <main class="grid-cards">
-        
         <a href="https://www.elpou.cat/noticia/5865/llibreria-roca" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5865_roca_1_gran.jpg"></div>
             <div class="card-content">
                 <span class="meta">Comerç Històric</span>
                 <h3>Llibreria Roca</h3>
                 <p>La llibreria en actiu més antiga de Catalunya i Espanya.</p>
-                <span class="author-meta">Per Lluís Virós</span>
             </div>
         </a>
-
         <a href="https://www.elpou.cat/noticia/5843/casa-wenceslao-marin" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5843_casa_marin_1_gran.jpg"></div>
             <div class="card-content">
                 <span class="meta">Residencial</span>
                 <h3>Casa de Wenceslao Marín</h3>
-                <p>Llar de Montserrat Bové, una de les primeres metgesses catalanes.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <p>Modernisme burgès vinculat a les primeres metgesses catalanes.</p>
             </div>
         </a>
-
         <a href="https://www.elpou.cat/noticia/5806/nau-annexa-fabrica-balcells" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5806_nau_balcells_1_gran.jpg"></div>
             <div class="card-content">
                 <span class="meta">Industrial</span>
-                <h3>Nau fàbrica Balcells</h3>
-                <p>Història de l'adaptació dels espais fabrils a la plaça Jaquetti.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <h3>Fàbrica Balcells</h3>
+                <p>L'adaptació dels espais fabrils a la plaça de Palmira Jaquetti.</p>
             </div>
         </a>
-
         <a href="https://www.elpou.cat/noticia/5770/casa-farmacia-miro" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5770_farmacia_miro_1_gran.jpg"></div>
             <div class="card-content">
-                <span class="meta">Urbanisme</span>
+                <span class="meta">Eixample</span>
                 <h3>Casa farmàcia Miró</h3>
-                <p>Desenvolupament sobre el regadiu de la Séquia a la Sagrada Família.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <p>Urbanisme sobre el regadiu de la Séquia a la Sagrada Família.</p>
             </div>
         </a>
 
@@ -130,62 +115,68 @@
             <div class="card-content">
                 <span class="meta">Masia</span>
                 <h3>Mas de la Culla</h3>
-                <p>Talaia de vigilància del camí ral i referència vitivinícola.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <p>Talaia de vigilància del camí ral i referent vitivinícola.</p>
             </div>
         </a>
-
         <a href="https://www.elpou.cat/noticia/5663/casino" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5663_casino_1_gran.jpg"></div>
             <div class="card-content">
                 <span class="meta">Modernisme</span>
                 <h3>El Casino</h3>
-                <p>El cor cultural i arquitectònic del Passeig Pere III.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <p>La joia modernista d'Ignasi Oms al Passeig Pere III.</p>
             </div>
         </a>
-
         <a href="https://www.elpou.cat/noticia/5414/pont-reforma" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5414_pont_reforma_1_gran.jpg"></div>
             <div class="card-content">
                 <span class="meta">Infraestructura</span>
                 <h3>Pont de la Reforma</h3>
-                <p>Evolució històrica d'un nexe clau sobre el riu Cardener.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <p>Origen i evolució d'un nexe clau sobre el Cardener.</p>
             </div>
         </a>
-
-        <a href="https://www.elpou.cat/noticia/3697/pont-llarg" target="_blank" class="card">
-            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3697_pont_llarg_1_gran.jpg"></div>
+        <a href="https://www.elpou.cat/noticia/3324/pont-llarg" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3324_pont_llarg_1_gran.jpg"></div>
             <div class="card-content">
                 <span class="meta">Obra Hidràulica</span>
                 <h3>El pont Llarg</h3>
-                <p>L'aqüeducte més impressionant de la Séquia medieval.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <p>L'aqüeducte més gran del sistema de la Séquia medieval.</p>
             </div>
         </a>
 
-        <a href="https://www.elpou.cat/noticia/2407/conjunt-residencial-fabrica-nova" target="_blank" class="card">
-            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2407_residencial_fabrica_nova_1_gran.jpg"></div>
+        <a href="https://www.elpou.cat/noticia/3889/companyia-anonima-manresana-electricitat-came" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3889_anonima_1_gran.jpg"></div>
             <div class="card-content">
-                <span class="meta">Social</span>
-                <h3>Conjunt Fàbrica Nova</h3>
-                <p>L'habitatge obrer vinculat a l'imperi Bertrand i Serra.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <span class="meta">Industrial</span>
+                <h3>L'Anònima (CAME)</h3>
+                <p>Central tèrmica de 1894, testimoni de l'arribada de la llum.</p>
             </div>
         </a>
-
-        <a href="https://www.elpou.cat/noticia/2099/pont-vilomara" target="_blank" class="card">
-            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2099_pont_vilomara_1_gran.jpg"></div>
+        <a href="https://www.elpou.cat/noticia/2701/escorxador" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2701_escorxador_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Modernisme Civil</span>
+                <h3>L'escorxador</h3>
+                <p>Arquitectura modernista rehabilitada com a espai universitari.</p>
+            </div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2661/conjunt-residencial-fabrica-nova" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2661_residencial_fabrica_nova_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Social / Obrer</span>
+                <h3>Conjunt Fàbrica Nova</h3>
+                <p>L'habitatge vinculat a l'imperi Bertrand i Serra.</p>
+            </div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2348/pont-vilomara" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2348_pont_vilomara_1_gran.jpg"></div>
             <div class="card-content">
                 <span class="meta">Civil</span>
                 <h3>El pont de Vilomara</h3>
-                <p>Construcció històrica monumental sobre el Llobregat.</p>
-                <span class="author-meta">Per Lluís Virós</span>
+                <p>Punt de creuament històric monumental sobre el Llobregat.</p>
             </div>
         </a>
 
-    </main>
+        </main>
 
     <footer class="main-footer">
         <div class="footer-container">
@@ -200,8 +191,6 @@
                     <li><a href="mediterrania.html">Esdeveniments</a></li>
                     <li><a href="barris.html">Barris</a></li>
                     <li><a href="patrimoni.html">Patrimoni</a></li>
-                    <li><a href="llum.html">Guies</a></li>
-                    <li><a href="noticies.html">News</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -210,7 +199,6 @@
                     <li><a href="legal.html">Avís Legal</a></li>
                     <li><a href="privacitat.html">Privacitat</a></li>
                 </ul>
-                <div class="ai-badge">AI System Autonomous</div>
             </div>
         </div>
     </footer>
