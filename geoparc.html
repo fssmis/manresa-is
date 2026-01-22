@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geoparc | Manresa.is</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
+    <style>
+        * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Georgia', serif; background-color: #fff; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
+        /* --- CAPÇALERA UNIFICADA --- */
+        .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
+        .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
+        .punto-is { color: #f05a28 !important; }
+        .nav-menu { list-style: none; display: flex; gap: 15px; }
+        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
+        .nav-menu a:hover { color: #f05a28 !important; }
+        .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; }
+
+        /* --- HERO --- */
+        .hero { text-align: center; padding: 80px 20px 40px; }
+        .hero h1 { font-size: 3rem; font-weight: 400; letter-spacing: -1.5px; margin-bottom: 10px; }
+        .hero p { color: #666; font-style: italic; font-size: 1.1rem; }
+
+        /* --- GRID 4 COLUMNES --- */
+        .grid-cards { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; 
+            max-width: 1400px; 
+            margin: 0 auto; 
+            padding: 0 20px 80px; 
+        }
+        .card { text-decoration: none; color: inherit; display: flex; flex-direction: column; background: #fff; border: 1px solid #eee !important; border-radius: 10px; overflow: hidden; transition: transform 0.2s ease; }
+        .card:hover { transform: translateY(-4px); border-color: #ddd !important; }
+        .img-container { width: 100%; height: 160px; overflow: hidden; background: #f8fafc; }
+        .card img { width: 100%; height: 100%; object-fit: cover; }
+        .card-content { padding: 15px; }
+        .meta { font-family: sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
+        .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; height: 2.8em; overflow: hidden; }
+        .author-meta { font-family: sans-serif; font-size: 0.7rem; color: #94a3b8; margin-top: auto; }
+
+        /* --- FOOTER UNIFICAT --- */
+        .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 60px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
+        .footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
+        .footer-tagline { font-family: sans-serif; color: #64748b; font-size: 0.95rem; line-height: 1.6; }
+        .footer-col h3 { font-family: sans-serif; font-size: 0.9rem; font-weight: bold; margin-bottom: 25px; text-transform: uppercase; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 10px; }
+        .footer-col ul li a { text-decoration: none; color: #64748b; font-family: sans-serif; font-size: 0.95rem; }
+
+        @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } .nav-menu { display: none; } }
+    </style>
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Manresa<span class="punto-is">.is</span></a>
+            <ul class="nav-menu">
+                <li><a href="gastronomia.html">Teca i Beguda</a></li>
+                <li><a href="mediterrania.html">Esdeveniments</a></li>
+                <li><a href="barris.html">Barris</a></li>
+                <li><a href="patrimoni.html">Patrimoni</a></li>
+                <li><a href="geoparc.html" style="color: #f05a28;">Geoparc</a></li>
+                <li><a href="noticies.html">News</a></li>
+                <li><a href="manresia.html">ManresIA</a></li>
+            </ul>
+            <div class="nav-widgets">
+                <div class="widget" id="real-clock">🕒 --:--</div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Geoparc i Indrets</h1>
+        <p>Explorant el llegat geològic i natural de Manresa i el Bages. Arxiu d'indrets d'El Pou de la Gallina.</p>
+    </header>
+
+    <main class="grid-cards">
+        <a href="https://www.elpou.cat/noticia/5888/el-guix" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5888_el_guix_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Geologia</span>
+                <h3>El Guix</h3>
+                <p>Anàlisi geològica d'un dels barris amb més personalitat mineral de la ciutat.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/5713/el-serrat-del-pujolet" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5713_serrat_pujolet_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Mirador Natural</span>
+                <h3>El Serrat del Pujolet</h3>
+                <p>Un dels balcons naturals sobre la conca de Manresa.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/5499/la-riera-de-rajadell" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5499_riera_rajadell_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Entorn Fluvial</span>
+                <h3>La Riera de Rajadell</h3>
+                <p>L'ecosistema fluvial més ric i preservat del terme municipal.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/5330/el-parc-de-l-agulla" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5330_parc_agulla_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Lleure i Séquia</span>
+                <h3>El Parc de l'Agulla</h3>
+                <p>El gran estany que emmagatzema l'aigua de la Séquia i els seus valors ambientals.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/4207/els-comtals" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4207_comtals_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Paisatge Industrial</span>
+                <h3>Els Comtals</h3>
+                <p>Un indret on la natura i la història industrial es donen la mà vora el Cardener.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3534/el-coll-de-la-lluna" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3534_coll_lluna_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Senderisme</span>
+                <h3>El Coll de la Lluna</h3>
+                <p>Un punt estratègic en les rutes que envolten l'anella verda manresana.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/2843/el-pou-de-llum" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2843_pou_llum_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Monument / Indret</span>
+                <h3>El Pou de Llum</h3>
+                <p>L'escultura i l'espai simbòlic vinculat al Camí de l'Ignasi.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/2130/la-torre-del-paxot" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2130_torre_paxot_1_gran.jpg"></div>
+            <div class="card-content">
+                <span class="meta">Patrimoni Rural</span>
+                <h3>La Torre del Paxot</h3>
+                <p>Explorant els indrets de l'horta històrica de Manresa.</p>
+                <span class="author-meta">Per Lluís Virós</span>
+            </div>
+        </a>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
+                <p class="footer-tagline">Projecte de divulgació amb suport d'IA. No acceptem pagaments per aparèixer.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Explora</h3>
+                <ul>
+                    <li><a href="gastronomia.html">Teca i Beguda</a></li>
+                    <li><a href="mediterrania.html">Esdeveniments</a></li>
+                    <li><a href="barris.html">Barris</a></li>
+                    <li><a href="patrimoni.html">Patrimoni</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="legal.html">Avís Legal</a></li>
+                    <li><a href="privacitat.html">Privacitat</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const t = now.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit' });
+            const el = document.getElementById('real-clock');
+            if(el) el.innerHTML = `🕒 ${t}`;
+        }
+        setInterval(updateClock, 1000); updateClock();
+    </script>
+</body>
+</html>
