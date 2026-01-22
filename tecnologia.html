@@ -6,7 +6,7 @@
     <title>Patrimoni | Manresa.is</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
     <style>
-        /* ADN VISUAL MANRESA.IS (ESTIL MÀLAGA) */
+        /* ESTIL CLÒNIC MEDITERRANIA.HTML / MALAGA.IS */
         * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
         
         body { 
@@ -18,14 +18,14 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        h1, h2, h3, .nav-logo, .footer-logo, .intro-quote { 
+        h1, h2, h3, .nav-logo, .footer-logo, .card-title { 
             font-family: 'Georgia', serif !important; 
             color: #1a1a1a;
         }
 
         .punto-is { color: #f05a28 !important; }
 
-        /* ALINEACIÓ MESTRA: 1200px per a tot el lloc */
+        /* CONTENIDOR ALINEAT A 1200PX */
         .container { 
             max-width: 1200px; 
             margin: 0 auto; 
@@ -41,22 +41,45 @@
         .nav-menu a:hover { color: #f05a28 !important; }
         .widget { background: #f9f9f9; padding: 6px 14px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; font-weight: 600; }
 
-        /* CONTINGUT */
-        .main-content { margin: 80px 0; }
-        .text-reading-width { max-width: 800px; } /* L'amplada de lectura segueix sent 800px dins dels 1200px */
+        /* HEADER DE PÀGINA */
+        .page-header { margin: 60px 0 40px; }
+        h1 { font-size: clamp(2.5rem, 8vw, 3.8rem); letter-spacing: -2.5px; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
+        .page-description { font-size: 1.25rem; color: #64748b; max-width: 800px; margin-bottom: 40px; }
 
-        h1 { font-size: clamp(2.5rem, 8vw, 3.8rem); margin-bottom: 20px; letter-spacing: -2.5px; font-weight: 400; line-height: 1.1; }
-        h2 { font-size: 1.9rem; margin: 60px 0 25px; font-weight: 400; border-bottom: 1px solid #eee !important; padding-bottom: 15px; letter-spacing: -1px; }
-        h3 { font-size: 1.4rem; margin: 40px 0 15px; font-weight: 700; line-height: 1.3; }
+        /* GRID D'ENTRADES (ESTIL MEDITERRÀNIA) */
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 80px;
+        }
+
+        .card { 
+            display: flex; 
+            flex-direction: column; 
+            border-bottom: 1px solid #eee !important; 
+            padding-bottom: 30px; 
+            transition: opacity 0.2s;
+        }
         
-        .entry { margin-bottom: 60px; }
-        .entry-meta { font-family: sans-serif; font-size: 0.85rem; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; display: block; }
-        
-        .intro-quote { border-left: 3px solid #f05a28 !important; padding: 25px 35px; font-style: italic; font-size: 1.45rem; color: #444; background: #fffcfb; margin: 45px 0; line-height: 1.5; }
+        .card:hover { opacity: 0.8; }
+
+        .card-tag { 
+            font-family: sans-serif; 
+            font-size: 0.75rem; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            color: #f05a28; 
+            letter-spacing: 1px; 
+            margin-bottom: 12px; 
+        }
+
+        .card-title { font-size: 1.6rem; line-height: 1.2; margin-bottom: 15px; font-weight: 400; }
+        .card-excerpt { font-size: 1.05rem; color: #4b5563; line-height: 1.6; }
 
         /* FOOTER UNIFICAT */
         footer { background: #fff; padding: 100px 0; border-top: 1px solid #eee !important; margin-top: 100px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 40px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 60px; }
         .footer-logo { font-size: 1.8rem; font-weight: bold; text-decoration: none; display: block; margin-bottom: 15px; }
         .footer-tagline { color: #64748b; font-size: 0.95rem; line-height: 1.6; max-width: 400px; margin-bottom: 25px; font-family: sans-serif; }
         .footer-col h3 { font-family: sans-serif !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; color: #1a1a1a; }
@@ -65,7 +88,11 @@
         .footer-links a { color: #64748b; text-decoration: none; font-size: 1rem; font-family: sans-serif; }
         .footer-links a:hover { color: #f05a28; }
 
-        @media (max-width: 900px) { .nav-menu { display: none; } .footer-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { 
+            .nav-menu { display: none; } 
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
@@ -88,31 +115,49 @@
         </div>
     </nav>
 
-    <main class="container main-content">
-        <div class="text-reading-width">
+    <main class="container">
+        <header class="page-header">
             <h1>Patrimoni Ciutadà</h1>
-            <div class="intro-quote">
-                «La memòria de Manresa es construeix a través dels seus edificis, però sobretot de les històries que guarden les seves pedres.»
-            </div>
+            <p class="page-description">Explorem el llegat històric i arquitectònic de Manresa a través de la mirada de 'El Pou de la Gallina'.</p>
+        </header>
 
-            <article class="entry">
-                <span class="entry-meta">Arquitectura Industrial</span>
-                <h3>La Fàbrica Nova: El gegant que espera</h3>
-                <p>Un dels elements més emblemàtics del patrimoni fabril manresà. L'antiga fàbrica de Bertrand i Serra no és només un edifici, és el testimoni d'una època on Manresa era el motor tèxtil de la Catalunya central. Les seves dimensions encara impressionen i marquen el perfil de la ciutat des de la distància.</p>
-            </article>
+        <section class="grid">
+            <a href="#" style="text-decoration:none;" class="card">
+                <span class="card-tag">Arquitectura Industrial</span>
+                <h3 class="card-title">La Fàbrica Nova: El despertar del gegant de Bertrand i Serra</h3>
+                <p class="card-excerpt">Analitzem l'impacte històric de la Fàbrica Nova en l'urbanisme manresà i els futurs projectes per rehabilitar el complex fabril més gran de la ciutat.</p>
+            </a>
 
-            <article class="entry">
-                <span class="entry-meta">Nucli Antic</span>
-                <h3>El Carrer del Balç: Un viatge al segle XIV</h3>
-                <p>Poques ciutats conserven un carrer medieval tan intacte. El Carrer del Balç és una joia del patrimoni ciutadà que permet entendre l'urbanisme de l'època del Rei Pere III el Cerimoniós. Les darreres excavacions i restauracions documentades per El Pou de la Gallina posen de relleu la importància de conservar aquests espais soterrats.</p>
-            </article>
+            <a href="#" style="text-decoration:none;" class="card">
+                <span class="card-tag">Edat Mitjana</span>
+                <h3 class="card-title">Carrer del Balç: On el temps es va aturar al segle XIV</h3>
+                <p class="card-excerpt">Un recorregut per la història d'un carrer únic a Catalunya, conservat sota les cases del nucli antic, testimoni de la Manresa medieval.</p>
+            </a>
 
-            <article class="entry">
-                <span class="entry-meta">Barroc</span>
-                <h3>La Capella de Sant Ignasi: La Cova i el seu llegat</h3>
-                <p>Manresa és coneguda mundialment pel seu llegat ignasià. La Cova de Sant Ignasi, situada sobre el riu Cardener, ha estat objecte de nombrosos estudis sobre la seva integració en el paisatge i la seva evolució arquitectònica, sent un punt clau del patrimoni espiritual i turístic de la ciutat.</p>
-            </article>
-        </div>
+            <a href="#" style="text-decoration:none;" class="card">
+                <span class="card-tag">Ruta Ignasiana</span>
+                <h3 class="card-title">La Cova de Sant Ignasi: 500 anys de transformació espiritual</h3>
+                <p class="card-excerpt">L'evolució de la balma a l'espectacular conjunt barroc que corona el Cardener i atrau pelegrins d'arreu del món.</p>
+            </a>
+
+            <a href="#" style="text-decoration:none;" class="card">
+                <span class="card-tag">Pla de Bages</span>
+                <h3 class="card-title">Les tines de pedra seca: Patrimoni vinícola entre boscos</h3>
+                <p class="card-excerpt">Les estructures úniques a les Valls del Montcau que expliquen el passat esplendorós de la vinya a la comarca del Bages.</p>
+            </a>
+
+            <a href="#" style="text-decoration:none;" class="card">
+                <span class="card-tag">Modernisme</span>
+                <h3 class="card-title">El llegat d'Ignasi Oms i Lluís Muncunill a la Manresa burgesa</h3>
+                <p class="card-excerpt">Destaquem els edificis més representatius del modernisme local, des del Casino fins a la Casa Lluvià.</p>
+            </a>
+
+            <a href="#" style="text-decoration:none;" class="card">
+                <span class="card-tag">Civil</span>
+                <h3 class="card-title">Els ponts del Cardener: Unir la ciutat a través dels segles</h3>
+                <p class="card-excerpt">Del Pont Vell medieval fins a les infraestructures modernes, la història de Manresa escrita sobre l'aigua.</p>
+            </a>
+        </section>
     </main>
 
     <footer>
