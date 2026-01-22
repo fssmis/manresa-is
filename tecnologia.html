@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Patrimoni Ciutadà | Manresa.is</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
     <style>
+        /* ESTIL CLÒNIC MEDITERRANIA.HTML */
         * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 1.125rem; line-height: 1.7; color: #333; background-color: #fff; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, .nav-logo, .footer-logo, .card-title { font-family: 'Georgia', serif !important; color: #1a1a1a; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 1.125rem; line-height: 1.7; color: #333; background-color: #fff; }
+        h1, h3, .nav-logo, .card-title { font-family: 'Georgia', serif !important; color: #1a1a1a; }
         .punto-is { color: #f05a28 !important; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
@@ -17,33 +17,21 @@
         .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; }
         .nav-menu { list-style: none; display: flex; gap: 18px; }
         .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; }
-        .nav-menu a:hover { color: #f05a28 !important; }
-        .widget { background: #f9f9f9; padding: 6px 14px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; font-weight: 600; }
 
         .page-header { margin: 60px 0 40px; }
-        h1 { font-size: clamp(2.5rem, 8vw, 3.8rem); letter-spacing: -2.5px; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
+        h1 { font-size: clamp(2.5rem, 8vw, 3.8rem); letter-spacing: -2.5px; font-weight: 400; line-height: 1.1; }
         .page-description { font-size: 1.25rem; color: #64748b; max-width: 800px; margin-bottom: 40px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px; margin-bottom: 80px; }
-        .card { display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: opacity 0.2s; border-bottom: 1px solid #eee !important; padding-bottom: 25px; }
-        .card:hover { opacity: 0.85; }
-        .card-image { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; background-color: #f8fafc; }
-        .card-tag { font-family: sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #f05a28; letter-spacing: 1px; margin-bottom: 8px; }
-        .card-author { font-family: sans-serif; font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px; }
-        .card-title { font-size: 1.4rem; line-height: 1.2; margin-bottom: 12px; font-weight: 400; }
-        .card-excerpt { font-size: 0.95rem; color: #4b5563; line-height: 1.5; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px; }
+        .card { display: flex; flex-direction: column; text-decoration: none; color: inherit; border-bottom: 1px solid #eee !important; padding-bottom: 30px; }
+        .card-image { width: 100%; height: 240px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; background-color: #f1f5f9; }
+        .card-tag { font-family: sans-serif; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: #f05a28; letter-spacing: 1px; margin-bottom: 8px; }
+        .card-author { font-family: sans-serif; font-size: 0.8rem; color: #94a3b8; margin-bottom: 15px; }
+        .card-title { font-size: 1.55rem; line-height: 1.2; margin-bottom: 12px; font-weight: 400; }
+        .card-excerpt { font-size: 1rem; color: #4b5563; line-height: 1.6; }
 
         footer { background: #fff; padding: 100px 0; border-top: 1px solid #eee !important; margin-top: 100px; }
         .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 60px; }
-        .footer-logo { font-size: 1.8rem; font-weight: bold; text-decoration: none; display: block; margin-bottom: 15px; }
-        .footer-tagline { color: #64748b; font-size: 0.95rem; line-height: 1.6; max-width: 400px; margin-bottom: 25px; font-family: sans-serif; }
-        .footer-col h3 { font-family: sans-serif !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; color: #1a1a1a; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #64748b; text-decoration: none; font-size: 1rem; font-family: sans-serif; }
-        .footer-links a:hover { color: #f05a28; }
-
-        @media (max-width: 900px) { .nav-menu { display: none; } .footer-grid { grid-template-columns: 1fr; gap: 40px; } .grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -56,252 +44,78 @@
                 <li><a href="mediterrania.html">Esdeveniments</a></li>
                 <li><a href="barris.html">Barris</a></li>
                 <li><a href="patrimoni.html">Patrimoni</a></li>
-                <li><a href="llum.html">Guies</a></li>
                 <li><a href="noticies.html">News</a></li>
-                <li><a href="manresia.html">ManresIA</a></li>
             </ul>
-            <div class="nav-widgets">
-                <div class="widget" id="real-clock">🕒 --:--</div>
-            </div>
         </div>
     </nav>
 
     <main class="container">
         <header class="page-header">
             <h1>Patrimoni Ciutadà</h1>
-            <p class="page-description">Un recorregut visual i històric pels edificis que defineixen la identitat de Manresa. Cròniques de Lluís Virós per a 'El Pou de la Gallina'.</p>
+            <p class="page-description">L'arquitectura i la història de Manresa explicada per Lluís Virós. Un recull de les millors peces del Pou de la Gallina.</p>
         </header>
 
         <section class="grid">
-            
             <a href="#" class="card">
-                
-                <span class="card-tag">Comerç Històric · fa 2 dies</span>
-                <span class="card-author">Per Lluís Virós</span>
+                <img src="https://images.unsplash.com/photo-1513001900722-370f803f498d?auto=format&fit=crop&q=80&w=800" class="card-image" alt="Llibreria Roca">
+                <span class="card-tag">fa 2 dies</span>
+                <span class="card-author">per Lluís Virós</span>
                 <h3 class="card-title">Llibreria Roca</h3>
-                <p class="card-excerpt">La Roca, avui tancada, era la llibreria en actiu més antiga de Catalunya i Espanya.</p>
+                <p class="card-excerpt">La llibreria en actiu més antiga de Catalunya i Espanya, símbol de la cultura manresana.</p>
             </a>
 
             <a href="#" class="card">
-                
-                <span class="card-tag">Residencial · fa 23 dies</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa de Wenceslao Marín</h3>
-                <p class="card-excerpt">Edifici vinculat a Montserrat Bové Marsal, una de les primeres metgesses catalanes.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Industrial · fa 3 mesos</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Nau annexa de la fàbrica Balcells</h3>
-                <p class="card-excerpt">Adaptació constant dels espais fabrils a la plaça de Palmira Jaquetti.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Eixample · fa 4 mesos</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa de la farmàcia Miró</h3>
-                <p class="card-excerpt">Urbanització sobre el regadiu de la Séquia al barri de la Sagrada Família.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Masia · fa 5 mesos</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Mas de la Culla</h3>
-                <p class="card-excerpt">Talaia de vigilància del camí ral cap a Barcelona i gran explotació vitivinícola.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Modernisme · fa 7 mesos</span>
-                <span class="card-author">Per Lluís Virós</span>
+                <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&q=80&w=800" class="card-image" alt="El Casino">
+                <span class="card-tag">fa 7 mesos</span>
+                <span class="card-author">per Lluís Virós</span>
                 <h3 class="card-title">El Casino</h3>
-                <p class="card-excerpt">L'edifici més emblemàtic del primer tram del Passeig Pere III.</p>
+                <p class="card-excerpt">L'edifici modernista d'Ignasi Oms que presideix el primer tram del Passeig Pere III.</p>
             </a>
 
             <a href="#" class="card">
-                
-                <span class="card-tag">Neoclàssic · fa 3 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Antiga seu de Ràdio Manresa</h3>
-                <p class="card-excerpt">Edifici de 1890 a la Plana de l’Om, exponent de l'arquitectura burgesa del XIX.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Gòtic · fa 3 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Capella de Sant Marc</h3>
-                <p class="card-excerpt">Construïda al segle XV al peu del camí que sortia del pont Vell.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Neoclàssic · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Edifici del Suís</h3>
-                <p class="card-excerpt">Situat a la plaça Llisach, manté uns característics relleus a la façana de 1848.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Ignasià · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Església de Santa Llúcia</h3>
-                <p class="card-excerpt">Modesta edificació testimoni del Rapte de Sant Ignasi de Loiola.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Noucentisme · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Edifici Carretera de Cardona, 91</h3>
-                <p class="card-excerpt">Edifici de 1927 que destaca per la seva bella factura en xamfrà.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Barri Vell · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa Grané</h3>
-                <p class="card-excerpt">Reformada el 1911 per l’arquitecte Ignasi Oms i Ponsa a la baixada de la Seu.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Modernisme · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa Fornells</h3>
-                <p class="card-excerpt">Edifici de 1917 a la plaça Valldaura que resol l'encaix amb la Muralla.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Racionalisme · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Fàbrica Lemmerz</h3>
-                <p class="card-excerpt">Inaugurada el 1968 amb una façana d’estil racionalista industrial.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Plaça Major · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Magatzems Gras</h3>
-                <p class="card-excerpt">Aparador de la burgesia situat estratègicament a la cantonada amb Sant Miquel.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Obra Hidràulica · fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Aqüeducte de la Font dels Llops</h3>
-                <p class="card-excerpt">Sistema de regadiu de l’horta de Sant Pau de principi del segle XVIII.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Renaixement · fa 5 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Palau del Bisbe i Jutjats</h3>
-                <p class="card-excerpt">Gran edifici públic construït entre 1661 i 1685 per fra Andreu de Tarragona.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Eixample · fa 5 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa de Cultura de la Caixa de Pensions</h3>
-                <p class="card-excerpt">Construït entre 1920 i 1924, marca la frontera entre el barri antic i l’eixample.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">Industrial · fa 5 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">C.A.M.E. (L'Anònima)</h3>
-                <p class="card-excerpt">Central tèrmica de 1894, testimoni de l'arribada de l'electricitat a la ciutat.</p>
-            </a>
-
-            <a href="#" class="card">
-                
-                <span class="card-tag">fa 7 anys</span><span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa Vidal</h3>
-            </a>
-            <a href="#" class="card">
-                
-                <span class="card-tag">fa 7 anys</span><span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">La farinera Albareda</h3>
-            </a>
-            <a href="#" class="card">
-                
-                <span class="card-tag">fa 7 anys</span><span class="card-author">Per Lluís Virós</span>
+                <img src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?auto=format&fit=crop&q=80&w=800" class="card-image" alt="El Pont Llarg">
+                <span class="card-tag">fa 7 anys</span>
+                <span class="card-author">per Lluís Virós</span>
                 <h3 class="card-title">El pont Llarg</h3>
-            </a>
-            <a href="#" class="card">
-                
-                <span class="card-tag">fa 8 anys</span><span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Monestir de Santa Clara</h3>
-            </a>
-            <a href="#" class="card">
-                
-                <span class="card-tag">fa 8 anys</span><span class="card-author">Per Antoni Virós</span>
-                <h3 class="card-title">Capella de Sant Ignasi Malalt</h3>
-            </a>
-            <a href="#" class="card">
-                
-                <span class="card-tag">fa 9 anys</span><span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">L'escorxador</h3>
-            </a>
-            <a href="#" class="card">
-                
-                <span class="card-tag">fa 9 anys</span><span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Conjunt de la Fàbrica Nova</h3>
+                <p class="card-excerpt">L'aqüeducte de la Séquia, testimoni d'una de les obres d'enginyeria civil més importants de la història local.</p>
             </a>
 
+            <a href="#" class="card">
+                <img src="https://images.unsplash.com/photo-1548181449-3bc67c975640?auto=format&fit=crop&q=80&w=800" class="card-image" alt="Sant Ignasi">
+                <span class="card-tag">fa 8 anys</span>
+                <span class="card-author">per Antoni Virós</span>
+                <h3 class="card-title">Capella de Sant Ignasi Malalt</h3>
+                <p class="card-excerpt">Referència clau de la Manresa ignasiana al nucli antic de la ciutat.</p>
+            </a>
+
+            <a href="#" class="card">
+                <img src="https://images.unsplash.com/photo-1579294800821-694d95e86143?auto=format&fit=crop&q=80&w=800" class="card-image" alt="L'Escorxador">
+                <span class="card-tag">fa 9 anys</span>
+                <span class="card-author">per Lluís Virós</span>
+                <h3 class="card-title">L'escorxador</h3>
+                <p class="card-excerpt">Arquitectura industrial que s'ha adaptat als nous usos culturals i educatius de la ciutat.</p>
+            </a>
+
+            <a href="#" class="card">
+                <img src="https://images.unsplash.com/photo-1541432901012-a7bab14373ee?auto=format&fit=crop&q=80&w=800" class="card-image" alt="Cal Cura">
+                <span class="card-tag">fa 7 anys</span>
+                <span class="card-author">per Lluís Virós</span>
+                <h3 class="card-title">Xemeneia de Cal Cura</h3>
+                <p class="card-excerpt">Element vertical que recorda el passat industrial tèxtil del barri.</p>
+            </a>
         </section>
     </main>
 
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
-                <p class="footer-tagline">Curat amb IA. Guiat per valors locals. No acceptem pagaments per aparèixer a les nostres guies.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Explora</h3>
-                <ul class="footer-links">
-                    <li><a href="gastronomia.html">Teca i Beguda</a></li>
-                    <li><a href="mediterrania.html">Esdeveniments</a></li>
-                    <li><a href="barris.html">Barris</a></li>
-                    <li><a href="patrimoni.html">Patrimoni</a></li>
-                    <li><a href="llum.html">Guies</a></li>
-                    <li><a href="noticies.html">News</a></li>
-                    <li><a href="manresia.html">ManresIA</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="legal.html">Avís Legal</a></li>
-                    <li><a href="privacitat.html">Privacitat</a></li>
-                    <li><a href="divulgacio.html">Divulgació d'IA</a></li>
-                </ul>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="nav-logo">Manresa<span class="punto-is">.is</span></a>
+                    <p style="color:#64748b; font-size:0.9rem; margin-top:20px;">Curat amb IA. Guiat per valors locals.</p>
+                </div>
             </div>
         </div>
     </footer>
 
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const t = now.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit' });
-            const el = document.getElementById('real-clock');
-            if(el) el.innerHTML = `🕒 ${t}`;
-        }
-        setInterval(updateClock, 1000); updateClock();
-    </script>
 </body>
 </html>
