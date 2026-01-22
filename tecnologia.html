@@ -9,19 +9,23 @@
         * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Georgia', serif; background-color: #fff; color: #1a1a1a; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 
+        /* --- CAPÇALERA UNIFICADA --- */
         .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 1000; }
         .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 15px; }
         .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; color: #1a1a1a; }
         .punto-is { color: #f05a28 !important; }
         .nav-menu { list-style: none; display: flex; gap: 15px; }
-        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; }
+        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; transition: color 0.2s; }
         .nav-menu a:hover { color: #f05a28 !important; }
+        .nav-widgets { display: flex; align-items: center; gap: 10px; }
         .widget { background: #f9f9f9; padding: 6px 12px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; }
 
+        /* --- HERO --- */
         .hero { text-align: center; padding: 80px 20px 40px; }
         .hero h1 { font-size: 3rem; font-weight: 400; letter-spacing: -1.5px; margin-bottom: 10px; }
         .hero p { color: #666; font-style: italic; font-size: 1.1rem; }
 
+        /* --- GRID 4 COLUMNES --- */
         .grid-cards { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
@@ -35,10 +39,11 @@
         .img-container { width: 100%; height: 160px; overflow: hidden; background: #f8fafc; }
         .card img { width: 100%; height: 100%; object-fit: cover; }
         .card-content { padding: 15px; }
-        .meta { font-family: sans-serif; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
-        .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; }
-        .card p { font-size: 0.8rem; color: #555; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .meta { font-family: sans-serif; font-size: 0.6rem; font-weight: 700; text-transform: uppercase; color: #f05a28 !important; margin-bottom: 8px; display: block; }
+        .card h3 { font-size: 1.1rem; margin-bottom: 8px; font-weight: 400; line-height: 1.2; height: 2.8em; overflow: hidden; }
+        .author-meta { font-family: sans-serif; font-size: 0.7rem; color: #94a3b8; margin-top: auto; }
 
+        /* --- FOOTER UNIFICAT --- */
         .main-footer { background-color: #fff; padding: 80px 20px; border-top: 1px solid #eee !important; margin-top: 60px; }
         .footer-container { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; }
         .footer-logo { font-size: 1.8rem; font-weight: bold; margin-bottom: 20px; display: block; text-decoration: none; color: #1a1a1a; }
@@ -49,7 +54,7 @@
         .footer-col ul li a { text-decoration: none; color: #64748b; font-family: sans-serif; font-size: 0.95rem; }
 
         @media (max-width: 1100px) { .grid-cards { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .grid-cards { grid-template-columns: 1fr; } .footer-container { grid-template-columns: 1fr; } .nav-menu { display: none; } }
     </style>
 </head>
 <body>
@@ -73,110 +78,326 @@
 
     <header class="hero">
         <h1>Patrimoni Ciutadà</h1>
-        <p>Recull complet de les cròniques de Lluís Virós per a 'El Pou de la Gallina'.</p>
+        <p>Catàleg històric i visual de Manresa. Arxiu de cròniques de Lluís Virós.</p>
     </header>
 
     <main class="grid-cards">
         <a href="https://www.elpou.cat/noticia/5865/llibreria-roca" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5865_roca_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Comerç Històric</span>
-                <h3>Llibreria Roca</h3>
-                <p>La llibreria en actiu més antiga de Catalunya i Espanya.</p>
-            </div>
+            <div class="card-content"><span class="meta">Comerç</span><h3>Llibreria Roca</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
         <a href="https://www.elpou.cat/noticia/5843/casa-wenceslao-marin" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5843_casa_marin_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Residencial</span>
-                <h3>Casa de Wenceslao Marín</h3>
-                <p>Modernisme burgès vinculat a les primeres metgesses catalanes.</p>
-            </div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Wenceslao Marín</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
         <a href="https://www.elpou.cat/noticia/5806/nau-annexa-fabrica-balcells" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5806_nau_balcells_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Industrial</span>
-                <h3>Fàbrica Balcells</h3>
-                <p>L'adaptació dels espais fabrils a la plaça de Palmira Jaquetti.</p>
-            </div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>Nau fàbrica Balcells</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
         <a href="https://www.elpou.cat/noticia/5770/casa-farmacia-miro" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5770_farmacia_miro_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Eixample</span>
-                <h3>Casa farmàcia Miró</h3>
-                <p>Urbanisme sobre el regadiu de la Séquia a la Sagrada Família.</p>
-            </div>
+            <div class="card-content"><span class="meta">Urbanisme</span><h3>Casa farmàcia Miró</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
 
         <a href="https://www.elpou.cat/noticia/5753/mas-culla" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5753_culla_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Masia</span>
-                <h3>Mas de la Culla</h3>
-                <p>Talaia de vigilància del camí ral i referent vitivinícola.</p>
-            </div>
+            <div class="card-content"><span class="meta">Masia</span><h3>Mas de la Culla</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
         <a href="https://www.elpou.cat/noticia/5663/casino" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5663_casino_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Modernisme</span>
-                <h3>El Casino</h3>
-                <p>La joia modernista d'Ignasi Oms al Passeig Pere III.</p>
-            </div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>El Casino</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
+        <a href="https://www.elpou.cat/noticia/5555/casa-noguera-cal-jordi-ii" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5555_casa_noguera_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Noguera (II)</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/5460/casa-noguera-cal-jordi" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5460_noguera_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Noguera</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
         <a href="https://www.elpou.cat/noticia/5414/pont-reforma" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5414_pont_reforma_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Infraestructura</span>
-                <h3>Pont de la Reforma</h3>
-                <p>Origen i evolució d'un nexe clau sobre el Cardener.</p>
-            </div>
+            <div class="card-content"><span class="meta">Infraestructura</span><h3>Pont de la Reforma</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/5370/casa-abadal" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5370_casa_abadal_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Abadal</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/5283/cases-culla" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5283_culla_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Social</span><h3>Cases de la Culla</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/5243/farmacia-riu-born" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/5243_farmacia_riu_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Comerç</span><h3>Farmàcia Riu (Born)</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/4853/edifici-carrer-urgell-27" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4853_urgell_27_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Edifici Urgell, 27</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4818/casa-miro" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4818_casa_miro_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>Casa Miró</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4783/fabrica-guix" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4783_guix_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>La fàbrica del Guix</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4744/casa-englantina" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4744_englantina_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Englantina</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/4713/edifici-vegas" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4713_vegas_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Civil</span><h3>Edifici Las Vegas</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4675/antic-cinema-olimpia" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4675_olimpia_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Cultura</span><h3>Antic Cinema Olímpia</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4640/edifici-entre-carrer-sant-francesc-placa-gispert" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4640_gispert_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Edifici Pl. Gispert</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4606/antiga-seu-radio-manresa" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4606_radio_manresa_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Civil</span><h3>Antiga seu Ràdio Manresa</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/4568/capella-sant-marc" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4568_sant_marc_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Religiós</span><h3>Capella de Sant Marc</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4531/edifici-suis" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4531_suis_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Edifici del Suís</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4499/esgl-sia-santa-llucia-capella-rapte-sant-ignasi" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4499_santa_llucia_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Ignasià</span><h3>Església Sta. Llúcia</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4463/edifici-carretera-cardona-91" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4463_cardona_91_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Ctra. Cardona, 91</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/4424/casa-gran" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4424_casa_grane_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Grané</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4390/casa-fornells" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4390_fornells_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Fornells</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4354/fabrica-lemmerz" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4354_lemmerz_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>Fàbrica Lemmerz</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4319/magatzems-gras" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4319_magatzems_gras_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Comerç</span><h3>Magatzems Gras</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/4281/casa-arc-boti" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4281_arc_boti_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Civil</span><h3>Casa de l'Arc d'en Botí</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4245/aqueducte-font-dels-llops" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4245_font_llops_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Hidràulic</span><h3>Aqüeducte Font Llops</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4167/torre-carrer-dos-maig-cos" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4167_torre_cos_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Torre Dos de Maig</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4091/torre-alter" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4091_torre_alter_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Civil</span><h3>Torre Alter</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/4061/palau-bisbe-jutjats" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4061_jutjats_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Públic</span><h3>Palau Bisbe i Jutjats</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/4026/casa-matamala" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/4026_matamala_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Matamala</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3984/edifici-perramon" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3984_perramon_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Racionalisme</span><h3>Edifici Perramon</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3950/casa-vila" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3950_casa_vila_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Vila</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3916/casa-cultura-caixa-pensions" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3916_caixa_pensions_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Públic</span><h3>Casa Cultura Caixa</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3889/companyia-anonima-manresana-electricitat-came" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3889_anonima_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>L'Anònima (CAME)</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3747/clinica-sant-josep" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3747_clinica_sant_josep_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Sanitari</span><h3>Clínica Sant Josep</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3719/antiga-seu-cambra-comerc-industria" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3719_cambra_comerc_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Civil</span><h3>Cambra de Comerç</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3695/casal-llissach" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3695_llissach_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casal Llissach</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3664/centre-hospitalari" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3664_hospitalari_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Sanitari</span><h3>Centre Hospitalari</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3638/casal-regionalista" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3638_regionalista_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Social</span><h3>Casal Regionalista</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3601/casa-torra" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3601_casa_torra_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Torra</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3579/collegi-asil-dels-infants" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3579_asil_infants_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Social</span><h3>Col·legi Asil Infants</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3557/casa-arderiu" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3557_arderiu_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Arderiu</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3532/cova-sant-ignasi" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3532_cova_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Religiós</span><h3>La Cova de Sant Ignasi</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3497/farinera-favorita" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3497_favorita_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>Farinera La Favorita</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3475/casa-armengou" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3475_armengou_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Armengou</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3453/casa-vidal" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3453_casa_vidal_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Vidal</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3429/farinera-albareda" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3429_albareda_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>La Farinera Albareda</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3401/casa-cabot" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3401_casa_cabot_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Cabot</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3373/xemeneia-cal-cura" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3373_xemeneia_cal_cura_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>Xemeneia Cal Cura</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3349/edificis-placa-cots-10-11" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3349_placa_cots_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Edificis Plaça Cots</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
         <a href="https://www.elpou.cat/noticia/3324/pont-llarg" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3324_pont_llarg_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Obra Hidràulica</span>
-                <h3>El pont Llarg</h3>
-                <p>L'aqüeducte més gran del sistema de la Séquia medieval.</p>
-            </div>
+            <div class="card-content"><span class="meta">Hidràulic</span><h3>El Pont Llarg</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3295/casa-torras" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3295_casa_torras_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Torras</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
 
-        <a href="https://www.elpou.cat/noticia/3889/companyia-anonima-manresana-electricitat-came" target="_blank" class="card">
-            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3889_anonima_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Industrial</span>
-                <h3>L'Anònima (CAME)</h3>
-                <p>Central tèrmica de 1894, testimoni de l'arribada de la llum.</p>
-            </div>
+        <a href="https://www.elpou.cat/noticia/3264/antiga-esgl-sia-sant-josep-poble-nou" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3264_esglesia_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Religiós</span><h3>Sant Josep Poble Nou</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
-        <a href="https://www.elpou.cat/noticia/2701/escorxador" target="_blank" class="card">
-            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2701_escorxador_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Modernisme Civil</span>
-                <h3>L'escorxador</h3>
-                <p>Arquitectura modernista rehabilitada com a espai universitari.</p>
-            </div>
+        <a href="https://www.elpou.cat/noticia/3240/edifici-carrer-born-caribu" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3240_caribu_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Civil</span><h3>El Caribú (Born)</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
-        <a href="https://www.elpou.cat/noticia/2661/conjunt-residencial-fabrica-nova" target="_blank" class="card">
-            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2661_residencial_fabrica_nova_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Social / Obrer</span>
-                <h3>Conjunt Fàbrica Nova</h3>
-                <p>L'habitatge vinculat a l'imperi Bertrand i Serra.</p>
-            </div>
+        <a href="https://www.elpou.cat/noticia/3223/edifici-placa-creus" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3223_placa_creus_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Edifici Pl. de la Creu</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3184/pont-sant-francesc" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3184_sant_francesc_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Infraestructura</span><h3>Pont de Sant Francesc</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3159/casa-soler-arola" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3159_soler_arola_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Soler Arola</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3134/capella-sant-ignasi-malalt" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3134_ignasi_malalt_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Ignasià</span><h3>Sant Ignasi Malalt</h3><span class="author-meta">Per Antoni Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3103/edifici-placa-cots" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3103_placa_cots_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Edifici Pl. Cots, 1</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/3049/casa-oller" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3049_casa_oller_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Oller</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/3019/monestir-santa-clara" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/3019_santa_clara_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Religiós</span><h3>Monestir Santa Clara</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2987/fabrica-ramon-cuito" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2987_ramon_cuito_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>Fàbrica Ramon Cuitó</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2957/edifici-carrer-saclosa-31" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2957_saclosa_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Edifici Saclosa, 31</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2924/casa-torras-vigu" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2924_torras_vigue_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Residencial</span><h3>Casa Torras Vigué</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/2888/fabrica-salt" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2888_fabrica_salt_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Industrial</span><h3>Fàbrica del Salt</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2860/casa-planell" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2860_casa_planell_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Planell</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2820/auditori-sant-francesc" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2820_auditori_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Cultura</span><h3>Auditori St. Francesc</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+        <a href="https://www.elpou.cat/noticia/2795/casa-ferrer-gran" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2795_ferrer_granes_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Modernisme</span><h3>Casa Ferrer Granés</h3><span class="author-meta">Per Lluís Virós</span></div>
+        </a>
+
+        <a href="https://www.elpou.cat/noticia/2562/casa-ciutat" target="_blank" class="card">
+            <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2562_casa_ciutat_1_gran.jpg"></div>
+            <div class="card-content"><span class="meta">Públic</span><h3>La Casa de la Ciutat</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
         <a href="https://www.elpou.cat/noticia/2348/pont-vilomara" target="_blank" class="card">
             <div class="img-container"><img src="https://www.elpou.cat/fotos/noticies/2348_pont_vilomara_1_gran.jpg"></div>
-            <div class="card-content">
-                <span class="meta">Civil</span>
-                <h3>El pont de Vilomara</h3>
-                <p>Punt de creuament històric monumental sobre el Llobregat.</p>
-            </div>
+            <div class="card-content"><span class="meta">Civil</span><h3>Pont de Vilomara</h3><span class="author-meta">Per Lluís Virós</span></div>
         </a>
 
-        </main>
+    </main>
 
     <footer class="main-footer">
         <div class="footer-container">
