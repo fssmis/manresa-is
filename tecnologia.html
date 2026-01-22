@@ -1,82 +1,8 @@
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrimoni Ciutadà | Manresa.is</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 80'><path fill='%23f05a28' d='M10,70 L10,40 Q10,10 30,10 Q50,10 50,40 L50,70 Z' /><path fill='%23f05a28' d='M50,70 L50,40 Q50,10 70,10 Q90,10 90,40 L90,70 Z' /></svg>">
-    <style>
-        * { border: 0 !important; box-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 1.125rem; line-height: 1.7; color: #333; background-color: #fff; -webkit-font-smoothing: antialiased; }
-        h1, h2, h3, .nav-logo, .footer-logo, .card-title { font-family: 'Georgia', serif !important; color: #1a1a1a; }
-        .punto-is { color: #f05a28 !important; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        .top-nav { width: 100%; background: #fff; border-bottom: 1px solid #eee !important; padding: 12px 0; position: sticky; top: 0; z-index: 10000; }
-        .nav-inner { display: flex; justify-content: space-between; align-items: center; }
-        .nav-logo { font-size: 1.5rem; font-weight: bold; text-decoration: none; }
-        .nav-menu { list-style: none; display: flex; gap: 18px; }
-        .nav-menu a { text-decoration: none; color: #4a4a4a; font-family: sans-serif; font-size: 0.85rem; font-weight: 600; }
-        .nav-menu a:hover { color: #f05a28 !important; }
-        .widget { background: #f9f9f9; padding: 6px 14px; border-radius: 50px; font-family: sans-serif; font-size: 0.8rem; border: 1px solid #eee !important; color: #64748b; font-weight: 600; }
-
-        .page-header { margin: 60px 0 40px; }
-        h1 { font-size: clamp(2.5rem, 8vw, 3.8rem); letter-spacing: -2.5px; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
-        .page-description { font-size: 1.25rem; color: #64748b; max-width: 800px; margin-bottom: 40px; }
-
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 40px; margin-bottom: 80px; }
-        .card { display: flex; flex-direction: column; text-decoration: none; color: inherit; transition: opacity 0.2s; border-bottom: 1px solid #eee !important; padding-bottom: 25px; }
-        .card:hover { opacity: 0.85; }
-        .card-image { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 20px; background-color: #f8fafc; }
-        .card-tag { font-family: sans-serif; font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: #f05a28; letter-spacing: 1px; margin-bottom: 8px; }
-        .card-author { font-family: sans-serif; font-size: 0.75rem; color: #94a3b8; margin-bottom: 12px; }
-        .card-title { font-size: 1.4rem; line-height: 1.2; margin-bottom: 12px; font-weight: 400; }
-        .card-excerpt { font-size: 0.95rem; color: #4b5563; line-height: 1.5; }
-
-        footer { background: #fff; padding: 100px 0; border-top: 1px solid #eee !important; margin-top: 100px; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 60px; }
-        .footer-logo { font-size: 1.8rem; font-weight: bold; text-decoration: none; display: block; margin-bottom: 15px; }
-        .footer-tagline { color: #64748b; font-size: 0.95rem; line-height: 1.6; max-width: 400px; margin-bottom: 25px; font-family: sans-serif; }
-        .footer-col h3 { font-family: sans-serif !important; font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 30px; color: #1a1a1a; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 12px; }
-        .footer-links a { color: #64748b; text-decoration: none; font-size: 1rem; font-family: sans-serif; }
-        .footer-links a:hover { color: #f05a28; }
-
-        @media (max-width: 900px) { .nav-menu { display: none; } .footer-grid { grid-template-columns: 1fr; gap: 40px; } .grid { grid-template-columns: 1fr; } }
-    </style>
-</head>
-<body>
-
-    <nav class="top-nav">
-        <div class="container nav-inner">
-            <a href="index.html" class="nav-logo">Manresa<span class="punto-is">.is</span></a>
-            <ul class="nav-menu">
-                <li><a href="gastronomia.html">Teca i Beguda</a></li>
-                <li><a href="mediterrania.html">Esdeveniments</a></li>
-                <li><a href="barris.html">Barris</a></li>
-                <li><a href="patrimoni.html">Patrimoni</a></li>
-                <li><a href="llum.html">Guies</a></li>
-                <li><a href="noticies.html">News</a></li>
-                <li><a href="manresia.html">ManresIA</a></li>
-            </ul>
-            <div class="nav-widgets">
-                <div class="widget" id="real-clock">🕒 --:--</div>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container">
-        <header class="page-header">
-            <h1>Patrimoni Ciutadà</h1>
-            <p class="page-description">Un recorregut visual i històric pels edificis que defineixen la identitat de Manresa. Cròniques de Lluís Virós per a 'El Pou de la Gallina'.</p>
-        </header>
-
-        <section class="grid">
+<section class="grid">
             
             <a href="https://www.elpou.cat/noticia/5865/llibreria-roca" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5865_roca_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 2 dies</span>
+                <span class="card-tag">Comerç Històric</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Llibreria Roca</h3>
                 <p class="card-excerpt">La llibreria en actiu més antiga de Catalunya i Espanya.</p>
@@ -84,15 +10,15 @@
 
             <a href="https://www.elpou.cat/noticia/5843/casa-wenceslao-marin" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5843_casa_marin_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 23 dies</span>
+                <span class="card-tag">Modernisme / Residencial</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Casa de Wenceslao Marín</h3>
-                <p class="card-excerpt">Habitatge de Montserrat Bové Marsal, una de les primeres metgesses catalanes.</p>
+                <p class="card-excerpt">Llar de Montserrat Bové Marsal, una de les primeres metgesses catalanes.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/5806/nau-annexa-fabrica-balcells" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5806_nau_balcells_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 2 mesos</span>
+                <span class="card-tag">Industrial</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Nau annexa de la fàbrica Balcells</h3>
                 <p class="card-excerpt">Adaptació constant dels espais fabrils a la plaça de Palmira Jaquetti.</p>
@@ -100,7 +26,7 @@
 
             <a href="https://www.elpou.cat/noticia/5770/casa-farmacia-miro" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5770_farmacia_miro_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 3 mesos</span>
+                <span class="card-tag">Urbanisme / Eixample</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Casa de la farmàcia Miró</h3>
                 <p class="card-excerpt">Urbanització sobre el regadiu de la Séquia al barri de la Sagrada Família.</p>
@@ -108,204 +34,114 @@
 
             <a href="https://www.elpou.cat/noticia/5753/mas-culla" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5753_culla_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 4 mesos</span>
+                <span class="card-tag">Masia / Patrimoni Rural</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Mas de la Culla</h3>
-                <p class="card-excerpt">Una de les masies més importants pel seu paper de talaia en la vigilància del camí ral.</p>
+                <p class="card-excerpt">Talaia de vigilància del camí ral i gran explotació vitivinícola.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/5663/casino" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5663_casino_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 5 mesos</span>
+                <span class="card-tag">Modernisme</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">El Casino</h3>
-                <p class="card-excerpt">Al mig del primer tram del Passeig, en un solar enorme, destaca el Casino.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/5555/casa-noguera-cal-jordi-ii" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/5555_casa_noguera_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 7 mesos</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa Noguera o Cal Jordi (II)</h3>
-                <p class="card-excerpt">Fitxa de l'edifici modernista de 1903 a la plaça de Sant Ignasi.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/5460/casa-noguera-cal-jordi" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/5460_noguera_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 9 mesos</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa Noguera o Cal Jordi</h3>
-                <p class="card-excerpt">A la plaça de Sant Ignasi, núm. 9, destaca aquesta obra modernista.</p>
+                <p class="card-excerpt">L'edifici més emblemàtic del primer tram del Passeig Pere III.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/5414/pont-reforma" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5414_pont_reforma_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 10 mesos</span>
+                <span class="card-tag">Enginyeria Civil</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Pont de la Reforma</h3>
-                <p class="card-excerpt">Origen i evolució del pont més utilitzat actualment a causa de les obres.</p>
+                <p class="card-excerpt">Origen i evolució del pont actualment clau per a la mobilitat.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/5370/casa-abadal" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5370_casa_abadal_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa un any</span>
+                <span class="card-tag">Residencial / Burgesia</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Casa Abadal</h3>
-                <p class="card-excerpt">Espai cèntric d’habitatges benestants a la Plana de l'Om.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/5283/cases-culla" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/5283_culla_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa un any</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Cases de la Culla</h3>
-                <p class="card-excerpt">Promocions d’habitatges socials dissenyades el 1956.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/5243/farmacia-riu-born" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/5243_farmacia_riu_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa un any</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Farmàcia Riu, al Born</h3>
-                <p class="card-excerpt">Establiment de planta irregular adaptat a la parcel·la històrica.</p>
+                <p class="card-excerpt">Habitatge benestant a l'espai medieval de la Plana de l'Om.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/5216/antiga-seu-radio-manresa" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5216_radio_manresa_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 3 anys</span>
+                <span class="card-tag">Neoclàssic / Mitjans</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Antiga seu de Ràdio Manresa</h3>
-                <p class="card-excerpt">Edifici de 1890 en estil neoclàssic acadèmic a la Plana de l'Om.</p>
+                <p class="card-excerpt">Edifici de 1890 propi de l'arquitectura burgesa del segle XIX.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/5164/capella-sant-marc" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5164_sant_marc_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 3 anys</span>
+                <span class="card-tag">Gòtic / Religiós</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Capella de Sant Marc</h3>
-                <p class="card-excerpt">Església gòtica del segle XV situada al costat del pont Vell.</p>
+                <p class="card-excerpt">Església d'un antic hospital de leprosos al peu del pont Vell.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/5086/edifici-suis" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/5086_suis_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 4 anys</span>
+                <span class="card-tag">Neoclàssic</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">Edifici del Suís</h3>
-                <p class="card-excerpt">Estil neoclàssic tradicional de 1848 situat a la plaça Llisach.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/5017/esglesia-santa-llucia-capella-rapte-sant-ignasi" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/5017_santa_llucia_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Església de Santa Llúcia</h3>
-                <p class="card-excerpt">Testimoni ignasià del Rapte de Sant Ignasi de Loiola.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/4955/edifici-carretera-cardona-91" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/4955_ctra_cardona_91_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Edifici Carretera de Cardona, 91</h3>
-                <p class="card-excerpt">Edifici de 1927 entre el noucentisme i el neoclàssic.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/4914/casa-grane" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/4914_casa_grane_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 4 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa Grané</h3>
-                <p class="card-excerpt">Edifici del segle XVIII reformat el 1911 per Ignasi Oms.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/4820/palau-bisbe-jutjats" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/4820_palau_bisbe_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 5 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Palau del Bisbe i Jutjats</h3>
-                <p class="card-excerpt">Gran edifici públic situat a la pujada de la Seu.</p>
+                <p class="card-excerpt">Construcció de 1848 que manté relleus característics a la façana.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/4711/companyia-anonima-manresana-electricitat-came" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/4711_anonima_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 5 anys</span>
+                <span class="card-tag">Industrial / Academicista</span>
                 <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">C.A.M.E. (L'Anònima)</h3>
-                <p class="card-excerpt">Central tèrmica de 1894 en estil industrial academicista.</p>
+                <h3 class="card-title">L'Anònima (CAME)</h3>
+                <p class="card-excerpt">Central tèrmica de 1894, testimoni de l'electrificació de Manresa.</p>
             </a>
 
-            <a href="https://www.elpou.cat/noticia/3832/casa-vidal" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/3832_vidal_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 7 anys</span>
+            <a href="https://www.elpou.cat/noticia/4351/clinica-sant-josep" target="_blank" class="card">
+                <img src="https://www.elpou.cat/fotos/noticies/4351_clinica_sant_josep_1_gran.jpg" class="card-image">
+                <span class="card-tag">Sanitari / Noucentisme</span>
                 <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Casa Vidal</h3>
-                <p class="card-excerpt">Residència emblemàtica del catàleg de patrimoni de la ciutat.</p>
+                <h3 class="card-title">Clínica de Sant Josep</h3>
+                <p class="card-excerpt">Edifici nascut arran de la pandèmia de la 'grip espanyola' de 1918.</p>
+            </a>
+
+            <a href="https://www.elpou.cat/noticia/4134/farinera-favorita" target="_blank" class="card">
+                <img src="https://www.elpou.cat/fotos/noticies/4134_favorita_1_gran.jpg" class="card-image">
+                <span class="card-tag">Industrial / Fariner</span>
+                <span class="card-author">Per Lluís Virós</span>
+                <h3 class="card-title">Farinera La Favorita</h3>
+                <p class="card-excerpt">Aprofitament hidràulic del Cardener transformat en indústria el 1861.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/3697/pont-llarg" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/3697_pont_llarg_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 7 anys</span>
+                <span class="card-tag">Obra Hidràulica</span>
                 <span class="card-author">Per Lluís Virós</span>
                 <h3 class="card-title">El pont Llarg</h3>
-                <p class="card-excerpt">L'aqüeducte més gran de la Séquia de Manresa.</p>
-            </a>
-
-            <a href="https://www.elpou.cat/noticia/2407/conjunt-residencial-fabrica-nova" target="_blank" class="card">
-                <img src="https://www.elpou.cat/fotos/noticies/2407_residencial_fabrica_nova_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 9 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
-                <h3 class="card-title">Conjunt de la Fàbrica Nova</h3>
-                <p class="card-excerpt">L'habitatge obrer vinculat a la gran fàbrica Bertrand i Serra.</p>
+                <p class="card-excerpt">L'aqüeducte més important del sistema de regadiu de la Séquia.</p>
             </a>
 
             <a href="https://www.elpou.cat/noticia/2099/pont-vilomara" target="_blank" class="card">
                 <img src="https://www.elpou.cat/fotos/noticies/2099_pont_vilomara_1_gran.jpg" class="card-image">
-                <span class="card-tag">fa 10 anys</span>
-                <span class="card-author">Per Lluís Virós</span>
+                <span class="card-tag">Pont Històric</span>
+                <span class="card-author">Lluís Virós / F. Rubí</span>
                 <h3 class="card-title">El pont de Vilomara</h3>
-                <p class="card-excerpt">Construcció històrica sobre el riu Llobregat.</p>
+                <p class="card-excerpt">Punt de creuament històric sobre el riu Llobregat.</p>
+            </a>
+
+            <a href="https://www.elpou.cat/noticia/2275/escorxador" target="_blank" class="card">
+                <img src="https://www.elpou.cat/fotos/noticies/2275_escorxador_1_gran.jpg" class="card-image">
+                <span class="card-tag">Modernisme / Civil</span>
+                <span class="card-author">Per Lluís Virós</span>
+                <h3 class="card-title">L'escorxador</h3>
+                <p class="card-excerpt">Arquitectura civil modernista reconvertida avui en espai universitari.</p>
+            </a>
+
+            <a href="https://www.elpou.cat/noticia/2407/conjunt-residencial-fabrica-nova" target="_blank" class="card">
+                <img src="https://www.elpou.cat/fotos/noticies/2407_residencial_fabrica_nova_1_gran.jpg" class="card-image">
+                <span class="card-tag">Residencial / Obrer</span>
+                <span class="card-author">Per Lluís Virós</span>
+                <h3 class="card-title">Conjunt de la Fàbrica Nova</h3>
+                <p class="card-excerpt">Habitatges per a la colònia obrera de la fàbrica Bertrand i Serra.</p>
             </a>
 
         </section>
-    </main>
-
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
-                <a href="index.html" class="footer-logo">Manresa<span class="punto-is">.is</span></a>
-                <p class="footer-tagline">Curat amb IA. Guiat per valors locals. No acceptem pagaments per aparèixer a les nostres guies.</p>
-            </div>
-            <div class="footer-col">
-                <h3>Explora</h3>
-                <ul class="footer-links">
-                    <li><a href="gastronomia.html">Teca i Beguda</a></li>
-                    <li><a href="mediterrania.html">Esdeveniments</a></li>
-                    <li><a href="barris.html">Barris</a></li>
-                    <li><a href="patrimoni.html">Patrimoni</a></li>
-                    <li><a href="llum.html">Guies</a></li>
-                    <li><a href="noticies.html">News</a></li>
-                    <li><a href="manresia.html">ManresIA</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h3>Legal</h3>
-                <ul class="footer-links">
-                    <li><a href="legal.html">Avís Legal</a></li>
-                    <li><a href="privacitat.html">Privacitat</a></li>
-                    <li><a href="divulgacio.html">Divulgació d'IA</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const t = now.toLocaleTimeString('ca-ES', { hour: '2-digit', minute: '2-digit' });
-            const el = document.getElementById('real-clock');
-            if(el) el.innerHTML = `🕒 ${t}`;
-        }
-        setInterval(updateClock, 1000); updateClock();
-    </script>
-</body>
-</html>
