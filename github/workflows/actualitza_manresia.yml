@@ -1,0 +1,39 @@
+name: Actualitzador Diari ManresIA
+
+on:
+  schedule:
+    - cron: '0 9 * * *' # S'executa cada dia a les 09:00 AM
+  workflow_dispatch: # Permet executar-lo manualment per provar
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixant el repositori
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.MANRESIA_TOKEN }}
+
+      - name: Actualitzant el fitxer HTML
+        run: |
+          # Aquí el robot agafa el fitxer, mou la paraula d'avui a l'hemeroteca 
+          # i en posa una de nova (aquest script el gestionaré jo amb tu)
+          echo "Actualitzant contingut..."
+          # (Per ara fem que el robot sàpiga que ha d'entrar aquí)
+
+      - name: Pujant canvis a GitHub
+        run: |
+          git config --global user.name 'ManresIA-Robot'
+          git config --global user.email 'robot@manresa.is'
+          git add .
+          git commit -m "Actualització diària automàtica" || echo "Sense canvis"
+          git push
+
+      - name: Pujant al servidor per FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: ./ # Ajusta-ho si la web està en una carpeta específica de l'FTP
