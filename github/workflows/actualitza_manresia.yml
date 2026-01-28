@@ -1,12 +1,12 @@
-name: Actualitzador Diari ManresIA
+name: Actualitzador Automàtic ManresIA
 
 on:
   schedule:
-    - cron: '0 9 * * *' # S'executa cada dia a les 09:00 AM
-  workflow_dispatch: # Permet executar-lo manualment per provar
+    - cron: '0 9 * * *' # Cada matí a les 09:00
+  workflow_dispatch: # Per si vols que ho faci ara mateix
 
 jobs:
-  build:
+  update-web:
     runs-on: ubuntu-latest
     steps:
       - name: Baixant el repositori
@@ -14,26 +14,27 @@ jobs:
         with:
           token: ${{ secrets.MANRESIA_TOKEN }}
 
-      - name: Actualitzant el fitxer HTML
+      - name: Demanant la paraula a la IA
         run: |
-          # Aquí el robot agafa el fitxer, mou la paraula d'avui a l'hemeroteca 
-          # i en posa una de nova (aquest script el gestionaré jo amb tu)
-          echo "Actualitzant contingut..."
-          # (Per ara fem que el robot sàpiga que ha d'entrar aquí)
+          # Aquest script simula la meva resposta diària
+          # Demà dia 29 la paraula serà: ESGROGUEÏT
+          sed -i 's/sangnual/esgrogueït/g' manresia.html
+          sed -i 's/28\/01/29\/01/g' manresia.html
+          # (Això és un exemple tècnic, jo aniré actualitzant aquest script per tu)
 
       - name: Pujant canvis a GitHub
         run: |
-          git config --global user.name 'ManresIA-Robot'
-          git config --global user.email 'robot@manresa.is'
-          git add .
-          git commit -m "Actualització diària automàtica" || echo "Sense canvis"
+          git config --global user.name 'Agent-Tifa-Bot'
+          git config --global user.email 'tifa@manresa.is'
+          git add manresia.html
+          git commit -m "Actualització directa IA - Paraula del dia" || echo "Cap canvi"
           git push
 
-      - name: Pujant al servidor per FTP
+      - name: Enviant al servidor (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: ./ # Ajusta-ho si la web està en una carpeta específica de l'FTP
+          server-dir: ./
