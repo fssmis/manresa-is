@@ -66,21 +66,21 @@
     <script>
         function tiraRuleta() {
             const diccionari = [
-                {m: "Xeruc", d: "Maldestre o amb moviments poc hàbils."},
-                {m: "Atuells", d: "Estris de cuina, especialment els de terrissa."},
-                {m: "Gargamella", d: "La gola o part interior del coll."},
-                {m: "Atandador", d: "Qui reparteix l'aigua als regants de la Séquia."},
-                {m: "Nècora", d: "Persona una mica curta o beneita."},
-                {m: "Esclofolla", d: "Càscara d'ou o de fruita seca."},
-                {m: "Enraonar", d: "Conversar o parlar amb algú."},
-                {m: "Punxir", d: "Punxar (forma clàssica de Manresa)."},
-                {m: "Torreta", d: "Recipient de terrissa per a les flors; test."},
-                {m: "Postada", d: "Prestatge de fusta fixat a la paret."},
-                {m: "Espatllar", d: "Fer malbé un mecanisme o objecte."},
-                {m: "Eixarrancat", d: "Amb les cames excessivament obertes."},
-                {m: "Batzac", d: "Sotrac o cop brusc i inesperat."},
-                {m: "Xau-xau", d: "Caminar a poc a poc, sense pressa."},
-                {m: "Sangnual", d: "Persona molt lenta, que sembla que no tingui sang."}
+                {m: "Xeruc", d: "maldestre o amb moviments poc hàbils."},
+                {m: "Atuells", d: "estris de cuina, especialment els de terrissa."},
+                {m: "Gargamella", d: "la gola o part interior del coll."},
+                {m: "Atandador", d: "qui reparteix l'aigua als regants de la Séquia."},
+                {m: "Nècora", d: "persona una mica curta o beneita."},
+                {m: "Esclofolla", d: "càscara d'ou o de fruita seca."},
+                {m: "Enraonar", d: "conversar o parlar amb algú."},
+                {m: "Punxir", d: "punxar (forma clàssica de Manresa)."},
+                {m: "Torreta", d: "recipient de terrissa per a les flors; test."},
+                {m: "Postada", d: "prestatge de fusta fixat a la paret."},
+                {m: "Espatllar", d: "fer malbé un mecanisme o objecte."},
+                {m: "Eixarrancat", d: "amb les cames excessivament obertes."},
+                {m: "Batzac", d: "sotrac o cop brusc i inesperat."},
+                {m: "Xau-xau", d: "caminar a poc a poc, sense pressa."},
+                {m: "Sangnual", d: "persona molt lenta, que sembla que no tingui sang."}
             ];
             
             const triada = diccionari[Math.floor(Math.random() * diccionari.length)];
@@ -88,14 +88,14 @@
             
             display.innerHTML = `
                 <span style="display:block; font-weight:bold; font-size:1.8rem; text-transform:uppercase;">🎯 ${triada.m}</span>
-                <span style="display:block; font-size:1.1rem; color:#444; font-style:italic; margin-top:5px; text-transform: none;">${triada.d}</span>
+                <span style="display:block; font-size:1.1rem; color:#444; font-style:italic; margin-top:5px; text-transform: none; font-weight: normal;">${triada.d}</span>
             `;
         }
     </script>
 
     <div class="tifa">
         <strong>🕵️ Agent Tifa diu:</strong><br>
-        "Ara la ruleta sí que té substància! Si et surt un mot que no coneixes, ja no faràs cara de nècora: aquí mateix t'explico què vol dir cada paraulota del Bages."
+        "Ara sí, nano! Tot en minúscules, com ha de ser, que no cal cridar per entendre'ns. Si la ruleta et surt bé, ja podem dir que tenim el parlar de Manresa a la butxaca!"
     </div>
 
     <div class="hemeroteca">
