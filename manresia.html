@@ -33,12 +33,17 @@
     <h1 style="font-family: Georgia, serif; font-size: 3.5rem; margin-bottom:10px;">Manres<span class="orange">IA</span></h1>
     <p><i>L'algoritme que entén el Bages. <strong>Estat del sistema: Al dia.</strong></i></p>
     
-    <div class="ia-card">
-        <span class="orange">PARAULA DEL DIA (2026-01-28):</span>
-        <h2 style="font-size: 2.5rem; margin: 10px 0;">sangnual</h2>
-        <p style="font-size: 1.2rem;">Persona lenta d'accions o de reaccions, que sembla que no tingui sang a les venes.</p>
-        <span class="exemple">"Vinga, no siguis tan sangnual i anem tirant cap a la fira, que ens tancaran les parades!"</span>
-    </div>
+<script>
+        // AQUEST SCRIPT LLEGEIX LES DADES DEL JSON QUE JO ACTUALITZARÉ
+        fetch('paraules.json?v=' + Math.random())
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('paraula-web').textContent = data.paraula;
+                document.getElementById('definicio-web').textContent = data.definicio;
+                document.getElementById('exemple-web').textContent = data.exemple;
+                document.getElementById('data-web').textContent = data.data;
+            });
+    </script>
 
     <div class="ruleta-container">
         <p style="margin-top:0; font-weight: bold;">No saps què dir? Tira la ruleta del parlar!</p>
