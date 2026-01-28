@@ -3,7 +3,7 @@ name: Actualitzador Automàtic ManresIA
 on:
   schedule:
     - cron: '0 9 * * *' # Cada matí a les 09:00
-  workflow_dispatch: # Per si vols que ho faci ara mateix
+  workflow_dispatch: # Botó per executar-ho ara
 
 jobs:
   update-web:
@@ -14,23 +14,7 @@ jobs:
         with:
           token: ${{ secrets.MANRESIA_TOKEN }}
 
-      - name: Demanant la paraula a la IA
-        run: |
-          # Aquest script simula la meva resposta diària
-          # Demà dia 29 la paraula serà: ESGROGUEÏT
-          sed -i 's/sangnual/esgrogueït/g' manresia.html
-          sed -i 's/28\/01/29\/01/g' manresia.html
-          # (Això és un exemple tècnic, jo aniré actualitzant aquest script per tu)
-
-      - name: Pujant canvis a GitHub
-        run: |
-          git config --global user.name 'Agent-Tifa-Bot'
-          git config --global user.email 'tifa@manresa.is'
-          git add manresia.html
-          git commit -m "Actualització directa IA - Paraula del dia" || echo "Cap canvi"
-          git push
-
-      - name: Enviant al servidor (FTP)
+      - name: Enviant tot al servidor (FTP)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -38,3 +22,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: ./
+          # Aquesta línia és CLAU: evita que el robot esborri les imatges del servidor
+          dangerous-clean-slate: false
